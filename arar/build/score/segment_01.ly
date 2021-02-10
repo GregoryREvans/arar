@@ -1,18 +1,3 @@
-\version "2.19.84"                                                             %! abjad.LilyPondFile._get_format_pieces()
-\language "english"                                                            %! abjad.LilyPondFile._get_format_pieces()
-
-\include "/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily"           %! abjad.LilyPondFile._get_formatted_includes()
-\include "/Users/evansdsg2/Scores/arar/arar/build/first_stylesheet.ily"        %! abjad.LilyPondFile._get_formatted_includes()
-
-\header {                                                                      %! abjad.LilyPondFile._get_formatted_blocks()
-    tagline = ##f
-}                                                                              %! abjad.LilyPondFile._get_formatted_blocks()
-
-\layout {}
-
-\paper {}
-
-\score {                                                                       %! abjad.LilyPondFile._get_formatted_blocks()
 
     \context Score = "arar Score"
     <<
@@ -1131,4 +1116,3 @@
         >>
 
     >>
-}                                                                              %! abjad.LilyPondFile._get_formatted_blocks()

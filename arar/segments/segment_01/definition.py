@@ -4,17 +4,13 @@ import abjad
 import baca
 import evans
 
-from arar.materials.pitch import clef_handlers, global_pitch_handler
+from arar.materials.pitch import pitch_handler_one
 from arar.materials.score_structure.instruments import instruments as insts
 from arar.materials.score_structure.score_structure import score
-from arar.materials.score_structure.segment_01.time_signatures import (
-    time_signatures,
-)
-from arar.materials.timespans.segment_01.convert_timespans import (
-    handler_commands,
+from arar.materials.score_structure.segment_01.time_signatures import time_signatures
+from arar.materials.timespans.segment_01.convert_timespans import (  # handler_commands,
     rhythm_commands,
 )
-
 
 maker = evans.SegmentMaker(
     instruments=insts,
@@ -40,11 +36,16 @@ maker = evans.SegmentMaker(
             abjad.select().components(abjad.Score),
         ),
         "skips",
-        handler_commands,
+        # handler_commands,
+        # evans.call(
+        #     "vertical",
+        #     global_pitch_handler,
+        #     evans.return_vertical_moment_ties,
+        # ),
         evans.call(
-            "vertical",
-            global_pitch_handler,
-            evans.return_vertical_moment_ties,
+            "Voice 1",
+            pitch_handler_one,
+            abjad.select(),
         ),
         evans.call(
             "score",
@@ -65,7 +66,7 @@ maker = evans.SegmentMaker(
     ],
     score_template=score,
     time_signatures=time_signatures,
-    clef_handlers=clef_handlers,
+    # clef_handlers=clef_handlers,
     tuplet_bracket_noteheads=False,
     add_final_grand_pause=False,
     score_includes=[

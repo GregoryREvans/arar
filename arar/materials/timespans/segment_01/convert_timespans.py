@@ -1,11 +1,7 @@
 import abjad
 import evans
 
-from arar.materials.pitch import (
-    pitch_handler_four,
-    pitch_handler_three,
-    pitch_handler_two,
-)
+from arar.materials.pitch import pitch_handler_one, pitch_handler_two
 from arar.materials.score_structure.segment_01.rhythm_material_pattern import (
     rhythm_material_list,
 )
@@ -49,10 +45,8 @@ evans.timespan.intercalate_silences(rhythm_commands)
 # ######
 voicewise_material = abjad.OrderedDict(
     [
-        ("Voice 1", pitch_handler_two),
+        ("Voice 1", pitch_handler_one),
         ("Voice 2", pitch_handler_two),
-        ("Voice 3", pitch_handler_three),
-        ("Voice 4", pitch_handler_four),
     ]
 )
 
@@ -75,6 +69,6 @@ for span in segment_01_pitch_timespans:
 # ##############
 # all commands#
 # ##############
-handler_commands = [
-    pitch_commands,
-]
+# handler_commands = [
+#     pitch_commands,
+# ]
