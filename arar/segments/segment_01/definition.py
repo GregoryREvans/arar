@@ -3,6 +3,7 @@ import pathlib
 import abjad
 import baca
 import evans
+from abjadext import rmakers
 
 from arar.materials.pitch import pitch_handler_one
 from arar.materials.score_structure.instruments import instruments as insts
@@ -48,6 +49,27 @@ maker = evans.SegmentMaker(
             abjad.select(),
         ),
         evans.call(
+            "Voice 2",
+            evans.IntermittentVoiceHandler(
+                evans.RhythmHandler(
+                    rmakers.stack(
+                        evans.RTMMaker(
+                            [
+                                "(1 (1 1 1))",
+                            ]
+                        ),
+                        rmakers.trivialize(abjad.select().tuplets()),
+                        rmakers.extract_trivial(abjad.select().tuplets()),
+                        rmakers.rewrite_rest_filled(abjad.select().tuplets()),
+                        rmakers.rewrite_sustained(abjad.select().tuplets()),
+                    ),
+                    forget=False,
+                ),
+                direction=abjad.Down,
+            ),
+            abjad.select().leaves().get([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]),
+        ),
+        evans.call(
             "score",
             evans.SegmentMaker.beam_score,
             abjad.select().components(abjad.Score),
@@ -68,7 +90,7 @@ maker = evans.SegmentMaker(
     time_signatures=time_signatures,
     # clef_handlers=clef_handlers,
     tuplet_bracket_noteheads=False,
-    add_final_grand_pause=False,
+    add_final_grand_pause=True,
     score_includes=[
         "/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily",
         "/Users/evansdsg2/Scores/arar/arar/build/first_stylesheet.ily",

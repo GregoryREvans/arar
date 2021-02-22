@@ -72,6 +72,11 @@
 
             \time 2/4                                                          %! scaling time signatures
             s1 * 1/2
+            % [Global Context measure 11]                                      %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+
+            \once \override Score.TimeSignature.stencil = ##f                  %! applying ending skips
+            \time 3/16                                                         %! scaling time signatures
+            s1 * 3/16
 
         }
 
@@ -398,6 +403,19 @@
 
                         r2
                         \bar "||"
+                        % [Voice 1 measure 11]                                 %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying ending skips
+                        \once \override Rest.color = #white                    %! applying ending skips
+                        r1 * 3/32
+
+                        \once \override MultiMeasureRest.color = #white        %! applying ending skips
+                        R1 * 3/32
+                        ^ \markup {                                            %! applying ending skips
+                            \musicglyph                                        %! applying ending skips
+                                #"scripts.ushortfermata"                       %! applying ending skips
+                            }                                                  %! applying ending skips
+                        \stopStaff \startStaff                                 %! applying ending skips
 
                     }
 
@@ -421,41 +439,64 @@
                         "Guitar"                                               %! applying staff names and clefs
                         r4
 
-                        \override Staff.Stem.stemlet-length = 0.75
-                        af16
-                        [
+                        <<
 
-                        a''16
+                            \context Voice = "Voice 2"
+                            {
 
-                        a''16
+                                \voiceOne
+                                \override Staff.Stem.stemlet-length = 0.75
+                                af16
+                                [
 
-                        \revert Staff.Stem.stemlet-length
-                        a''16
-                        ]
+                                a''16
 
-                        \override Staff.Stem.stemlet-length = 0.75
-                        ef'16
-                        [
+                                a''16
 
-                        a''16
+                                \revert Staff.Stem.stemlet-length
+                                a''16
+                                ]
 
-                        a''16
+                                \override Staff.Stem.stemlet-length = 0.75
+                                ef'16
+                                [
 
-                        \revert Staff.Stem.stemlet-length
-                        a''16
-                        ]
+                                a''16
 
-                        \override Staff.Stem.stemlet-length = 0.75
-                        d''16
-                        [
+                                a''16
 
-                        a''16
+                                \revert Staff.Stem.stemlet-length
+                                a''16
+                                ]
 
-                        a''16
+                                \override Staff.Stem.stemlet-length = 0.75
+                                d''16
+                                [
 
-                        \revert Staff.Stem.stemlet-length
-                        a''16
-                        ]
+                                a''16
+
+                                a''16
+
+                                \revert Staff.Stem.stemlet-length
+                                a''16
+                                ]
+
+                            }
+
+                            \context Voice = "intermittent_voice"
+                            {
+
+                                \voiceTwo
+                                c'4
+
+                                c'4
+
+                                c'4
+
+                            }
+
+                        >>
+                        \oneVoice
 
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "16")
                         \times 2/3 {
@@ -1121,6 +1162,19 @@
                             \bar "||"
 
                         }
+                        % [Voice 2 measure 11]                                 %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
+
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying ending skips
+                        \once \override Rest.color = #white                    %! applying ending skips
+                        r1 * 3/32
+
+                        \once \override MultiMeasureRest.color = #white        %! applying ending skips
+                        R1 * 3/32
+                        ^ \markup {                                            %! applying ending skips
+                            \musicglyph                                        %! applying ending skips
+                                #"scripts.ushortfermata"                       %! applying ending skips
+                            }                                                  %! applying ending skips
+                        \stopStaff \startStaff                                 %! applying ending skips
 
                     }
 
