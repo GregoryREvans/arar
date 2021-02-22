@@ -2,15 +2,15 @@ import abjad
 handler_to_value = abjad.OrderedDict(
     [
         (
-            'rhythm_handler_one',
+            'flute_rhythm_handler_one',
             abjad.OrderedDict(
                 [
-                    ('state', 0),
+                    ('state', 3),
                     ]
                 ),
             ),
         (
-            'silence_maker',
+            'silence_handler',
             abjad.OrderedDict(
                 [
                     (
@@ -26,10 +26,10 @@ handler_to_value = abjad.OrderedDict(
                 ),
             ),
         (
-            'Composite Handler',
+            'guitar_rhythm_handler_one',
             abjad.OrderedDict(
                 [
-                    ('state', 1),
+                    ('state', 15),
                     ]
                 ),
             ),

@@ -30,16 +30,25 @@ import abjad
 # abjad.show(fitted_meters, scale=0.85)
 
 fitted_meter_pairs = (
-    (4, 4),
-    (3, 4),
-    (5, 4),
-    (3, 4),
-    (4, 4),
-    (3, 4),
-    (5, 4),
-    (3, 4),
-    (4, 4),
-    (2, 4),
+    (15, 16),
+    (14, 16),
+    (12, 16),
+    (17, 16),
+    (16, 16),
+    (15, 16),
+    (13, 16),
+    (19, 16),
+    (18, 16),
+    (17, 16),
+    (16, 16),
+    (15, 16),
+    (13, 16),
+    (17, 16),
+    (16, 16),
+    (15, 16),
+    (14, 16),
+    (13, 16),
+    (12, 16),
 )
 fitted_meters = [abjad.Meter(_) for _ in fitted_meter_pairs]
 time_signatures = [abjad.TimeSignature(_) for _ in fitted_meters]
