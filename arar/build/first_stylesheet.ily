@@ -1,7 +1,7 @@
 \version "2.19.84"
 \language "english"
 #(set-default-paper-size "letterportrait")
-#(set-global-staff-size 12) % was 13. Try 12.5?
+#(set-global-staff-size 13) % was 12. Try 12.5?
 \include "/Users/evansdsg2/evans/lilypond/evans-markups.ily"
 \include "/Users/evansdsg2/evans/lilypond/evans-spanners.ily"
 \include "/Users/evansdsg2/baca/lilypond/baca.ily"
@@ -59,9 +59,8 @@
 		\override RehearsalMark.font-size = 3
 		\override RehearsalMark.outside-staff-priority = 500
 		\override RehearsalMark.self-alignment-X = #center
-        \override TimeSignature.X-extent = #'(0 . 0)
-		%{ \override TimeSignature.right-padding = #3 %}
-		%{ \override TimeSignature.X-extent = ##f %}
+		\override TimeSignature.padding = #7
+        %{ \override TimeSignature.X-extent = #'(0 . 0) %}
         \override TimeSignature.X-offset = #ly:self-alignment-interface::x-aligned-on-self
         \override TimeSignature.Y-extent = #'(0 . 0)
         \override TimeSignature.break-align-symbol = ##f
@@ -100,7 +99,7 @@
 		\override Hairpin.padding = #2
 		\override Glissando.breakable = ##t
 		\override Glissando.thickness = #2
-		\override Stem.thickness = #0.5
+		%{ \override Stem.thickness = #0.5 %}
 		\override Staff.thickness = #0.5
 		\override MetronomeMark.font-size = 3
 		\override NoteColumn.ignore-collision = ##t %
@@ -108,7 +107,7 @@
 		%{ \override GraceSpacing.spacing-increment = #2.0 %}
         %{ \override SpacingSpanner.strict-note-spacing = ##t %}
         %{ \override SpacingSpanner.uniform-stretching = ##t %}
-        \override StaffGrouper.staff-staff-spacing = #'((basic-distance . 14) (minimum-distance . 14) (padding . 2))
+        \override StaffGrouper.staff-staff-spacing = #'((basic-distance . 16) (minimum-distance . 14) (padding . 2))
 		\override Stem.stemlet-length = #1.15
 		\override StemTremolo.beam-width = 1
 		\override StemTremolo.beam-thickness = #0.3
@@ -157,7 +156,7 @@
 
 \paper {
 	system-separator-markup = \markup { \slashSeparator }
-	system-system-spacing = #'((basic-distance . 13) (minimum-distance . 13) (padding . 4))
+	system-system-spacing = #'((basic-distance . 15) (minimum-distance . 15) (padding . 4))
 
 	indent = 20\mm
     short-indent = 15\mm
@@ -178,14 +177,14 @@
 	\override #'(font-name . "STIXGeneral")
 	\bold \fontsize #2
     \concat {
-      "Adumbration -"
+      "Alearear -"
 	  \fromproperty #'page:page-number-string "- GR Evans"
      }
   }
   evenFooterMarkup = \markup \fill-line {
 	\override #'(font-name . "STIXGeneral")
 	\bold \fontsize #2
-	\concat { "Adumbration -"
+	\concat { "Alearear-"
 	\fromproperty #'page:page-number-string
 	"- GR Evans"
     }

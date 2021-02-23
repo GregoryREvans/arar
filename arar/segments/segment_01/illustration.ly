@@ -146,6 +146,10 @@
                             \once \override Staff.Tie.transparent = ##t
                             \once \override Dots.staff-position = #1.75
                             f''1.
+                            :32
+                            \pp
+                            - \tweak stencil #abjad-flared-hairpin
+                            \<
                             \glissando                                         %! abjad.glissando(7)
 
                             \once \override Staff.Tie.transparent = ##t
@@ -159,6 +163,8 @@
                             \revert NoteHead.no-ledgers                        %! abjad.glissando(6)
                             \undo \hide NoteHead                               %! abjad.glissando(6)
                             f''4
+                            :32
+                            \ff
 
                         }
 
@@ -170,6 +176,10 @@
                             \once \override Staff.Tie.transparent = ##t
                             \once \override Dots.staff-position = #1.75
                             f''2.
+                            :32
+                            \p
+                            - \tweak stencil #abjad-flared-hairpin
+                            \<
                             \glissando                                         %! abjad.glissando(7)
 
                             \once \override Staff.Tie.transparent = ##t
@@ -183,6 +193,8 @@
                             \revert NoteHead.no-ledgers                        %! abjad.glissando(6)
                             \undo \hide NoteHead                               %! abjad.glissando(6)
                             f''4
+                            :32
+                            \f
 
                         }
                         % [Voice 1 measure 3]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -197,6 +209,10 @@
                             \once \override Staff.Tie.transparent = ##t
                             \once \override Dots.staff-position = #1.75
                             e''1
+                            :32
+                            \mp
+                            - \tweak stencil #abjad-flared-hairpin
+                            \<
                             \glissando                                         %! abjad.glissando(7)
 
                             \once \override Staff.Tie.transparent = ##t
@@ -210,6 +226,8 @@
                             \revert NoteHead.no-ledgers                        %! abjad.glissando(6)
                             \undo \hide NoteHead                               %! abjad.glissando(6)
                             e''4
+                            :32
+                            \mf
 
                         }
                         % [Voice 1 measure 5]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -217,6 +235,10 @@
                         \once \override Staff.Tie.transparent = ##t
                         \once \override Dots.staff-position = #1.75
                         cs''2.
+                        :32
+                        \p
+                        - \tweak stencil #abjad-flared-hairpin
+                        \<
                         \glissando                                             %! abjad.glissando(7)
 
                         \once \override Staff.Tie.transparent = ##t
@@ -230,6 +252,8 @@
                         \revert NoteHead.no-ledgers                            %! abjad.glissando(6)
                         \undo \hide NoteHead                                   %! abjad.glissando(6)
                         cs''4
+                        :32
+                        \f
 
                         \tweak text #tuplet-number::calc-fraction-text
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 5) "8.")
@@ -239,6 +263,10 @@
                             \once \override Staff.Tie.transparent = ##t
                             \once \override Dots.staff-position = #1.75
                             c'''1
+                            :32
+                            \pp
+                            - \tweak stencil #abjad-flared-hairpin
+                            \<
                             \glissando                                         %! abjad.glissando(7)
 
                             \once \override Staff.Tie.transparent = ##t
@@ -252,6 +280,8 @@
                             \revert NoteHead.no-ledgers                        %! abjad.glissando(6)
                             \undo \hide NoteHead                               %! abjad.glissando(6)
                             c'''2
+                            :32
+                            \ff
 
                         }
                         % [Voice 1 measure 7]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -268,6 +298,9 @@
                             \once \override Staff.Tie.transparent = ##t
                             \once \override Dots.staff-position = #1.75
                             c'''1.
+                            :32
+                            \f
+                            \>
                             \glissando                                         %! abjad.glissando(7)
 
                             \once \override Staff.Tie.transparent = ##t
@@ -281,6 +314,8 @@
                             \revert NoteHead.no-ledgers                        %! abjad.glissando(6)
                             \undo \hide NoteHead                               %! abjad.glissando(6)
                             c'''4
+                            :32
+                            \p
 
                         }
 
@@ -292,6 +327,9 @@
                             \once \override Staff.Tie.transparent = ##t
                             \once \override Dots.staff-position = #1.75
                             c'''1.
+                            :32
+                            \ff
+                            \>
                             \glissando                                         %! abjad.glissando(7)
 
                             \once \override Staff.Tie.transparent = ##t
@@ -305,6 +343,8 @@
                             \revert NoteHead.no-ledgers                        %! abjad.glissando(6)
                             \undo \hide NoteHead                               %! abjad.glissando(6)
                             c'''4
+                            :32
+                            \p
 
                         }
 
@@ -316,6 +356,9 @@
                             \once \override Staff.Tie.transparent = ##t
                             \once \override Dots.staff-position = #1.75
                             fs''1.
+                            :32
+                            \f
+                            \>
                             \glissando                                         %! abjad.glissando(7)
 
                             \once \override Staff.Tie.transparent = ##t
@@ -329,6 +372,8 @@
                             \revert NoteHead.no-ledgers                        %! abjad.glissando(6)
                             \undo \hide NoteHead                               %! abjad.glissando(6)
                             fs''2
+                            :32
+                            \p
 
                         }
 
@@ -339,6 +384,9 @@
                             \once \override Staff.Tie.transparent = ##t
                             \once \override Dots.staff-position = #1.75
                             cs''1
+                            :32
+                            \mf
+                            \>
                             \glissando                                         %! abjad.glissando(7)
 
                             \once \override Staff.Tie.transparent = ##t
@@ -352,6 +400,8 @@
                             \revert NoteHead.no-ledgers                        %! abjad.glissando(6)
                             \undo \hide NoteHead                               %! abjad.glissando(6)
                             cs''4
+                            :32
+                            \p
 
                         }
 
@@ -363,6 +413,9 @@
                             \once \override Staff.Tie.transparent = ##t
                             \once \override Dots.staff-position = #1.75
                             g'2.
+                            :32
+                            \mp
+                            \>
                             \glissando                                         %! abjad.glissando(7)
 
                             \once \override Staff.Tie.transparent = ##t
@@ -376,6 +429,8 @@
                             \revert NoteHead.no-ledgers                        %! abjad.glissando(6)
                             \undo \hide NoteHead                               %! abjad.glissando(6)
                             g'4
+                            :32
+                            \p
 
                         }
                         % [Voice 1 measure 13]                                 %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -392,6 +447,10 @@
                             \once \override Staff.Tie.transparent = ##t
                             \once \override Dots.staff-position = #1.75
                             a'1
+                            :32
+                            \ff
+                            - \tweak stencil #abjad-flared-hairpin
+                            \>
                             \glissando                                         %! abjad.glissando(7)
 
                             \once \override Staff.Tie.transparent = ##t
@@ -405,6 +464,8 @@
                             \revert NoteHead.no-ledgers                        %! abjad.glissando(6)
                             \undo \hide NoteHead                               %! abjad.glissando(6)
                             a'2
+                            :32
+                            \mp
 
                         }
 
@@ -416,6 +477,10 @@
                             \once \override Staff.Tie.transparent = ##t
                             \once \override Dots.staff-position = #1.75
                             a'2.
+                            :32
+                            \p
+                            - \tweak stencil #abjad-flared-hairpin
+                            \<
                             \glissando                                         %! abjad.glissando(7)
 
                             \once \override Staff.Tie.transparent = ##t
@@ -429,6 +494,8 @@
                             \revert NoteHead.no-ledgers                        %! abjad.glissando(6)
                             \undo \hide NoteHead                               %! abjad.glissando(6)
                             a'8
+                            :32
+                            \f
 
                         }
 
@@ -440,6 +507,10 @@
                             \once \override Staff.Tie.transparent = ##t
                             \once \override Dots.staff-position = #1.75
                             fqs''1.
+                            :32
+                            \ff
+                            - \tweak stencil #abjad-flared-hairpin
+                            \>
                             \glissando                                         %! abjad.glissando(7)
 
                             \once \override Staff.Tie.transparent = ##t
@@ -453,6 +524,8 @@
                             \revert NoteHead.no-ledgers                        %! abjad.glissando(6)
                             \undo \hide NoteHead                               %! abjad.glissando(6)
                             fqs''4
+                            :32
+                            \mp
 
                         }
 
@@ -464,6 +537,10 @@
                             \once \override Staff.Tie.transparent = ##t
                             \once \override Dots.staff-position = #1.75
                             fs''2.
+                            :32
+                            \p
+                            - \tweak stencil #abjad-flared-hairpin
+                            \<
                             \glissando                                         %! abjad.glissando(7)
 
                             \once \override Staff.Tie.transparent = ##t
@@ -477,6 +554,8 @@
                             \revert NoteHead.no-ledgers                        %! abjad.glissando(6)
                             \undo \hide NoteHead                               %! abjad.glissando(6)
                             fs''4
+                            :32
+                            \f
 
                         }
 
@@ -488,6 +567,10 @@
                             \once \override Staff.Tie.transparent = ##t
                             \once \override Dots.staff-position = #1.75
                             ftqs''1
+                            :32
+                            \ff
+                            - \tweak stencil #abjad-flared-hairpin
+                            \>
                             \glissando                                         %! abjad.glissando(7)
 
                             \once \override Staff.Tie.transparent = ##t
@@ -501,6 +584,8 @@
                             \revert NoteHead.no-ledgers                        %! abjad.glissando(6)
                             \undo \hide NoteHead                               %! abjad.glissando(6)
                             ftqs''4
+                            :32
+                            \mp
 
                         }
 
@@ -512,6 +597,10 @@
                             \once \override Staff.Tie.transparent = ##t
                             \once \override Dots.staff-position = #1.75
                             f''2.
+                            :32
+                            \p
+                            - \tweak stencil #abjad-flared-hairpin
+                            \<
                             \glissando                                         %! abjad.glissando(7)
 
                             \once \override Staff.Tie.transparent = ##t
@@ -525,6 +614,8 @@
                             \revert NoteHead.no-ledgers                        %! abjad.glissando(6)
                             \undo \hide NoteHead                               %! abjad.glissando(6)
                             f''4
+                            :32
+                            \f
                             \bar "||"
 
                         }
@@ -569,6 +660,9 @@
                         \once \override Staff.Tie.transparent = ##t
                         \once \override Dots.staff-position = #1.75
                         <e c' f' af' b' e''>2.
+                        :32
+                        \p
+                        \<
                         \glissando                                             %! abjad.glissando(7)
                         % [Voice 2 measure 2]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -579,6 +673,9 @@
                         \override NoteColumn.glissando-skip = ##t              %! abjad.glissando(1)
                         \override NoteHead.no-ledgers = ##t                    %! abjad.glissando(1)
                         <e c' f' af' b' e''>2
+                        :32
+                        \f
+                        \>
 
                         \once \override Staff.Tie.transparent = ##t
                         \once \override Dots.staff-position = #1.75
@@ -587,6 +684,8 @@
                         \revert NoteHead.no-ledgers                            %! abjad.glissando(6)
                         \undo \hide NoteHead                                   %! abjad.glissando(6)
                         <e c' f' af' b' e''>8.
+                        :32
+                        \p
 
                         \once \override Staff.Tie.transparent = ##t
                         \once \override Dots.staff-position = #1.75
@@ -605,6 +704,9 @@
                         \once \override Staff.Tie.transparent = ##t
                         \once \override Dots.staff-position = #1.75
                         <e d' f' bf' b' e''>2..
+                        :32
+                        \p
+                        \<
                         \glissando                                             %! abjad.glissando(7)
                         % [Voice 2 measure 5]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -615,10 +717,16 @@
                         \override NoteColumn.glissando-skip = ##t              %! abjad.glissando(1)
                         \override NoteHead.no-ledgers = ##t                    %! abjad.glissando(1)
                         <e d' f' bf' b' e''>2
+                        :32
+                        \f
+                        - \tweak stencil #constante-hairpin
+                        \<
 
                         \once \override Staff.Tie.transparent = ##t
                         \once \override Dots.staff-position = #1.75
                         <e d' f' bf' b' e''>2
+                        :32
+                        \>
                         % [Voice 2 measure 6]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                         \once \override Staff.Tie.transparent = ##t
@@ -628,6 +736,8 @@
                         \revert NoteHead.no-ledgers                            %! abjad.glissando(6)
                         \undo \hide NoteHead                                   %! abjad.glissando(6)
                         <e d' f' bf' b' e''>2.
+                        :32
+                        \p
 
                         \once \override Staff.Tie.transparent = ##t
                         \once \override Dots.staff-position = #1.75
@@ -650,6 +760,10 @@
                         \once \override Staff.Tie.transparent = ##t
                         \once \override Dots.staff-position = #1.75
                         <e c' f' af' b' e''>1
+                        :32
+                        \mf
+                        - \tweak stencil #constante-hairpin
+                        \<
                         \glissando                                             %! abjad.glissando(7)
                         % [Voice 2 measure 9]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -660,6 +774,7 @@
                         \override NoteColumn.glissando-skip = ##t              %! abjad.glissando(1)
                         \override NoteHead.no-ledgers = ##t                    %! abjad.glissando(1)
                         <e c' f' af' b' e''>2.
+                        :32
 
                         \once \override Staff.Tie.transparent = ##t
                         \once \override Dots.staff-position = #1.75
@@ -668,10 +783,12 @@
                         \revert NoteHead.no-ledgers                            %! abjad.glissando(6)
                         \undo \hide NoteHead                                   %! abjad.glissando(6)
                         <e c' f' af' b' e''>8.
+                        :32
 
                         \once \override Staff.Tie.transparent = ##t
                         \once \override Dots.staff-position = #1.75
                         r8.
+                        \!
                         % [Voice 2 measure 10]                                 %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                         \once \override Staff.Tie.transparent = ##t
@@ -681,6 +798,9 @@
                         \once \override Staff.Tie.transparent = ##t
                         \once \override Dots.staff-position = #1.75
                         <e ds' gs' b' e''>2.
+                        :32
+                        \p
+                        \<
                         \glissando                                             %! abjad.glissando(7)
 
                         \once \override Staff.Tie.transparent = ##t
@@ -690,16 +810,23 @@
                         \override NoteColumn.glissando-skip = ##t              %! abjad.glissando(1)
                         \override NoteHead.no-ledgers = ##t                    %! abjad.glissando(1)
                         <e ds' gs' b' e''>8
+                        :32
+                        \f
+                        - \tweak stencil #constante-hairpin
+                        \<
                         % [Voice 2 measure 11]                                 %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                         \once \override Staff.Tie.transparent = ##t
                         \once \override Dots.staff-position = #1.75
                         <e ds' gs' b' e''>2
+                        :32
                         ~
 
                         \once \override Staff.Tie.transparent = ##t
                         \once \override Dots.staff-position = #1.75
                         <e ds' gs' b' e''>16
+                        :32
+                        \<
 
                         \once \override Staff.Tie.transparent = ##t
                         \once \override Dots.staff-position = #1.75
@@ -708,6 +835,8 @@
                         \revert NoteHead.no-ledgers                            %! abjad.glissando(6)
                         \undo \hide NoteHead                                   %! abjad.glissando(6)
                         <e ds' gs' b' e''>4
+                        :32
+                        \ff
 
                         \once \override Staff.Tie.transparent = ##t
                         \once \override Dots.staff-position = #1.75
@@ -725,6 +854,10 @@
                             \once \override Staff.Tie.transparent = ##t
                             \once \override Dots.staff-position = #1.75
                             <e ds' gs' b' e''>2
+                            :32
+                            \sfp
+                            - \tweak stencil #constante-hairpin
+                            \<
                             \glissando                                         %! abjad.glissando(7)
 
                             \once \override Staff.Tie.transparent = ##t
@@ -738,10 +871,12 @@
                             \revert NoteHead.no-ledgers                        %! abjad.glissando(6)
                             \undo \hide NoteHead                               %! abjad.glissando(6)
                             <e ds' gs' b' e''>4
+                            :32
 
                             \once \override Staff.Tie.transparent = ##t
                             \once \override Dots.staff-position = #1.75
                             r4.
+                            \!
 
                         }
                         % [Voice 2 measure 13]                                 %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -762,6 +897,9 @@
                         \once \override Staff.Tie.transparent = ##t
                         \once \override Dots.staff-position = #1.75
                         <e c' f' af' b' e''>2..
+                        :32
+                        \mp
+                        \<
                         \glissando                                             %! abjad.glissando(7)
 
                         \tweak text #tuplet-number::calc-fraction-text
@@ -776,6 +914,10 @@
                             \override NoteColumn.glissando-skip = ##t          %! abjad.glissando(1)
                             \override NoteHead.no-ledgers = ##t                %! abjad.glissando(1)
                             <e c' f' af' b' e''>2
+                            :32
+                            \ff
+                            - \tweak stencil #abjad-flared-hairpin
+                            \>
 
                             \once \override Staff.Tie.transparent = ##t
                             \once \override Dots.staff-position = #1.75
@@ -784,6 +926,8 @@
                             \revert NoteHead.no-ledgers                        %! abjad.glissando(6)
                             \undo \hide NoteHead                               %! abjad.glissando(6)
                             <e c' f' af' b' e''>8.
+                            :32
+                            \p
 
                             \once \override Staff.Tie.transparent = ##t
                             \once \override Dots.staff-position = #1.75
@@ -803,6 +947,10 @@
                             \once \override Staff.Tie.transparent = ##t
                             \once \override Dots.staff-position = #1.75
                             <e d' f' bf' b' e''>2..
+                            :32
+                            \pp
+                            - \tweak stencil #abjad-flared-hairpin
+                            \<
                             \glissando                                         %! abjad.glissando(7)
 
                         }
@@ -815,10 +963,16 @@
                         \override NoteColumn.glissando-skip = ##t              %! abjad.glissando(1)
                         \override NoteHead.no-ledgers = ##t                    %! abjad.glissando(1)
                         <e d' f' bf' b' e''>4..
+                        :32
+                        \ff
+                        - \tweak stencil #constante-hairpin
+                        \<
 
                         \once \override Staff.Tie.transparent = ##t
                         \once \override Dots.staff-position = #1.75
                         <e d' f' bf' b' e''>4..
+                        :32
+                        \>
 
                         \tweak text #tuplet-number::calc-fraction-text
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 15 13) "16")
@@ -832,6 +986,8 @@
                             \revert NoteHead.no-ledgers                        %! abjad.glissando(6)
                             \undo \hide NoteHead                               %! abjad.glissando(6)
                             <e d' f' bf' b' e''>2.
+                            :32
+                            \mf
 
                             \once \override Staff.Tie.transparent = ##t
                             \once \override Dots.staff-position = #1.75
@@ -847,6 +1003,10 @@
                         \once \override Staff.Tie.transparent = ##t
                         \once \override Dots.staff-position = #1.75
                         <e c' f' af' b' e''>4
+                        :32
+                        \sfp
+                        - \tweak stencil #constante-hairpin
+                        \<
                         \glissando                                             %! abjad.glissando(7)
 
                         \once \override Staff.Tie.transparent = ##t
@@ -860,10 +1020,12 @@
                         \revert NoteHead.no-ledgers                            %! abjad.glissando(6)
                         \undo \hide NoteHead                                   %! abjad.glissando(6)
                         <e c' f' af' b' e''>8
+                        :32
 
                         \once \override Staff.Tie.transparent = ##t
                         \once \override Dots.staff-position = #1.75
                         r8.
+                        \!
                         \bar "||"
                         % [Voice 2 measure 20]                                 %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 

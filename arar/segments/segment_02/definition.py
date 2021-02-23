@@ -36,6 +36,11 @@ def flat_gliss(selections):
         abjad.attach(literal_2, leaf)
 
 
+def hide_tuplet_bracket(selections):
+    for tuplet in abjad.select(selections).components(abjad.Tuplet):
+        tuplet.hide = True
+
+
 met_98 = abjad.MetronomeMark.make_tempo_equation_markup((1, 4), 98)
 mark_98 = abjad.LilyPondLiteral(
     [
@@ -150,6 +155,164 @@ maker = evans.SegmentMaker(
             "Voice 1", flat_gliss, abjad.select().leaves(pitched=True).get([24, 25])
         ),
         evans.call("Voice 2", flat_gliss, abjad.select()),
+        evans.attach("Voice 1", abjad.Dynamic("p"), baca.leaf(0)),
+        evans.attach("Voice 2", abjad.Dynamic("p"), baca.leaf(0)),
+        evans.attach("Voice 2", abjad.Articulation("accent"), baca.leaf(0)),
+        evans.attach("Voice 2", abjad.Articulation("staccato"), baca.leaf(1)),
+        evans.attach("Voice 2", abjad.Articulation("staccato"), baca.leaf(2)),
+        evans.attach("Voice 2", abjad.Articulation("staccato"), baca.leaf(3)),
+        evans.attach("Voice 2", abjad.Articulation("staccato"), baca.leaf(4)),
+        evans.attach("Voice 2", abjad.Articulation("accent"), baca.leaf(5)),
+        evans.attach("Voice 2", abjad.Articulation("staccato"), baca.leaf(6)),
+        evans.attach("Voice 2", abjad.Articulation("staccato"), baca.leaf(7)),
+        evans.attach("Voice 2", abjad.Articulation("staccato"), baca.leaf(8)),
+        evans.attach("Voice 2", abjad.Articulation("accent"), baca.leaf(9)),
+        evans.attach("Voice 2", abjad.Articulation("staccato"), baca.leaf(10)),
+        evans.attach("Voice 2", abjad.Articulation("staccato"), baca.leaf(11)),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("f"),
+            baca.leaf(12, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StartHairpin(">"),
+            baca.leaf(12, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("p"),
+            baca.leaf(13, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("ff"),
+            baca.leaf(14, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StartHairpin(">"),
+            baca.leaf(14, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("p"),
+            baca.leaf(15, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("pp"),
+            baca.leaf(16, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StartHairpin("<|"),
+            baca.leaf(16, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("mf"),
+            baca.leaf(17, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("pp"),
+            baca.leaf(18, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StartHairpin("<"),
+            baca.leaf(18, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("mf"),
+            baca.leaf(19, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("pp"),
+            baca.leaf(20, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StartHairpin("<"),
+            baca.leaf(20, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("mp"),
+            baca.leaf(21, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("pp"),
+            baca.leaf(22, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StartHairpin("<"),
+            baca.leaf(22, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("p"),
+            baca.leaf(23, pitched=True),
+        ),
+        # evans.attach(
+        #     "Voice 1",
+        #     abjad.Dynamic("ppp"),
+        #     baca.leaf(24, pitched=True),
+        # ),
+        evans.attach(
+            "Voice 1",
+            abjad.StartHairpin("o<"),
+            baca.leaf(24, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("mf"),
+            baca.leaf(25, pitched=True),
+        ),
+        evans.call(
+            "Voice 2",
+            hide_tuplet_bracket,
+            abjad.select().components(abjad.Tuplet).get([3]),
+        ),
+        evans.attach("Voice 2", abjad.Dynamic("f"), baca.leaf(12, pitched=True)),
+        evans.attach("Voice 2", abjad.StartHairpin(">"), baca.leaf(12, pitched=True)),
+        evans.attach("Voice 2", abjad.Dynamic("p"), baca.leaf(14, pitched=True)),
+        evans.attach("Voice 2", abjad.Dynamic("f"), baca.leaf(15, pitched=True)),
+        evans.attach("Voice 2", abjad.StartHairpin(">"), baca.leaf(15, pitched=True)),
+        evans.attach("Voice 2", abjad.Dynamic("p"), baca.leaf(18, pitched=True)),
+        evans.attach("Voice 2", abjad.Dynamic("pp"), baca.leaf(19, pitched=True)),
+        evans.attach("Voice 2", abjad.StartHairpin("<"), baca.leaf(19, pitched=True)),
+        evans.attach("Voice 2", abjad.Dynamic("ff"), baca.leaf(21, pitched=True)),
+        evans.call(
+            "Voice 2",
+            evans.ArticulationHandler(["tremolo"]),
+            abjad.select()
+            .leaves(pitched=True)
+            .get([12, 13, 14, 15, 16, 17, 18, 19, 20, 21]),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Markup(
+                r"\markup {gliss string 5 with tuning key}",
+                direction=abjad.Up,
+                literal=True,
+            ),
+            baca.leaf(0),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Markup(
+                r"\markup {keep scord.}",
+                direction=abjad.Up,
+                literal=True,
+            ),
+            baca.leaf(10),
+        ),
         evans.attach(
             "Global Context",
             abjad.Markup(
