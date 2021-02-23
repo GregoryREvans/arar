@@ -4,11 +4,11 @@ import abjad
 import baca
 import evans
 
-from arar.materials.pitch import flute_pitch_handler_one, guitar_pitch_handler_one
+from arar.materials.pitch import flute_pitch_handler_two, guitar_pitch_handler_two
 from arar.materials.score_structure.instruments import instruments as insts
 from arar.materials.score_structure.score_structure import score
-from arar.materials.score_structure.segment_01.time_signatures import time_signatures
-from arar.materials.timespans.segment_01.convert_timespans import (  # handler_commands,
+from arar.materials.score_structure.segment_02.time_signatures import time_signatures
+from arar.materials.timespans.segment_02.convert_timespans import (  # handler_commands,
     rhythm_commands,
 )
 
@@ -36,6 +36,19 @@ def flat_gliss(selections):
         abjad.attach(literal_2, leaf)
 
 
+met_98 = abjad.MetronomeMark.make_tempo_equation_markup((1, 4), 98)
+mark_98 = abjad.LilyPondLiteral(
+    [
+        r"^ \markup {",
+        r"  \huge",
+        r"  \concat {",
+        f"      {str(met_98)[8:]}",
+        r"  }",
+        r"}",
+    ],
+    format_slot="after",
+)
+
 met_135 = abjad.MetronomeMark.make_tempo_equation_markup((1, 4), 135)
 mark_135 = abjad.LilyPondLiteral(
     [
@@ -62,11 +75,11 @@ maker = evans.SegmentMaker(
     name_staves=True,
     commands=[
         rhythm_commands,
-        evans.call(
-            "score",
-            evans.SegmentMaker.transform_brackets,
-            abjad.select().components(abjad.Score),
-        ),
+        # evans.call(
+        #     "score",
+        #     evans.SegmentMaker.transform_brackets,
+        #     abjad.select().components(abjad.Score),
+        # ),
         # evans.call(
         #     "score",
         #     evans.SegmentMaker.rewrite_meter,
@@ -81,12 +94,12 @@ maker = evans.SegmentMaker(
         # ),
         evans.call(
             "Voice 1",
-            flute_pitch_handler_one,
+            flute_pitch_handler_two,
             abjad.select(),
         ),
         evans.call(
             "Voice 2",
-            guitar_pitch_handler_one,
+            guitar_pitch_handler_two,
             abjad.select(),
         ),
         # evans.call(
@@ -116,94 +129,31 @@ maker = evans.SegmentMaker(
         #     abjad.select().components(abjad.Score),
         # ),
         evans.call(
-            "Voice 1",
-            flat_gliss,
-            abjad.select().leaves(pitched=True).get([0, 1]),
+            "Voice 1", flat_gliss, abjad.select().leaves(pitched=True).get([12, 13])
         ),
         evans.call(
-            "Voice 1",
-            flat_gliss,
-            abjad.select().leaves(pitched=True).get([2, 3]),
+            "Voice 1", flat_gliss, abjad.select().leaves(pitched=True).get([14, 15])
         ),
         evans.call(
-            "Voice 1",
-            flat_gliss,
-            abjad.select().leaves(pitched=True).get([4, 5]),
+            "Voice 1", flat_gliss, abjad.select().leaves(pitched=True).get([16, 17])
         ),
         evans.call(
-            "Voice 1",
-            flat_gliss,
-            abjad.select().leaves(pitched=True).get([6, 7]),
+            "Voice 1", flat_gliss, abjad.select().leaves(pitched=True).get([18, 19])
         ),
         evans.call(
-            "Voice 1",
-            flat_gliss,
-            abjad.select().leaves(pitched=True).get([8, 9]),
+            "Voice 1", flat_gliss, abjad.select().leaves(pitched=True).get([20, 21])
         ),
         evans.call(
-            "Voice 1",
-            flat_gliss,
-            abjad.select().leaves(pitched=True).get([10, 11]),
+            "Voice 1", flat_gliss, abjad.select().leaves(pitched=True).get([22, 23])
         ),
         evans.call(
-            "Voice 1",
-            flat_gliss,
-            abjad.select().leaves(pitched=True).get([12, 13]),
+            "Voice 1", flat_gliss, abjad.select().leaves(pitched=True).get([24, 25])
         ),
-        evans.call(
-            "Voice 1",
-            flat_gliss,
-            abjad.select().leaves(pitched=True).get([14, 15]),
-        ),
-        evans.call(
-            "Voice 1",
-            flat_gliss,
-            abjad.select().leaves(pitched=True).get([16, 17]),
-        ),
-        evans.call(
-            "Voice 1",
-            flat_gliss,
-            abjad.select().leaves(pitched=True).get([18, 19]),
-        ),
-        evans.call(
-            "Voice 1",
-            flat_gliss,
-            abjad.select().leaves(pitched=True).get([20, 21]),
-        ),
-        evans.call(
-            "Voice 1",
-            flat_gliss,
-            abjad.select().leaves(pitched=True).get([22, 23]),
-        ),
-        evans.call(
-            "Voice 1",
-            flat_gliss,
-            abjad.select().leaves(pitched=True).get([24, 25]),
-        ),
-        evans.call(
-            "Voice 1",
-            flat_gliss,
-            abjad.select().leaves(pitched=True).get([26, 27]),
-        ),
-        evans.call(
-            "Voice 1",
-            flat_gliss,
-            abjad.select().leaves(pitched=True).get([28, 29]),
-        ),
-        evans.call(
-            "Voice 1",
-            flat_gliss,
-            abjad.select().leaves(pitched=True).get([30, 31]),
-        ),
-        evans.call(
-            "Voice 2",
-            flat_gliss,
-            abjad.select(),
-        ),
+        evans.call("Voice 2", flat_gliss, abjad.select()),
         evans.attach(
             "Global Context",
             abjad.Markup(
-                "Introduction",
+                "A",
                 direction=abjad.Up,
             )
             .caps()
@@ -213,8 +163,18 @@ maker = evans.SegmentMaker(
         ),
         evans.attach(
             "Global Context",
-            mark_135,
+            mark_98,
             baca.leaf(0),
+        ),
+        evans.attach(
+            "Global Context",
+            mark_135,
+            baca.leaf(5),
+        ),
+        evans.attach(
+            "Global Context",
+            abjad.MetronomeMark((1, 4), 135),
+            baca.leaf(5),
         ),
     ],
     score_template=score,
@@ -226,14 +186,14 @@ maker = evans.SegmentMaker(
         "/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily",
         "/Users/evansdsg2/Scores/arar/arar/build/first_stylesheet.ily",
     ],
-    segment_name="segment_01",
+    segment_name="segment_02",
     current_directory=pathlib.Path(__file__).resolve().parent,
     cutaway=False,
     beam_pattern="meter",
     beam_rests=True,
     mm_rests=False,
     barline="||",
-    tempo=((1, 4), 135),
+    tempo=((1, 4), 98),
     rehearsal_mark="",
     page_break_counts=[90],
 )

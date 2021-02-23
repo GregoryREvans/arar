@@ -11,6 +11,7 @@
 \score{
 	{
 	\include "segment_01.ly"
+	\include "segment_02.ly"
 	}
 %\midi{}
 }

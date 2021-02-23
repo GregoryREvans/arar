@@ -34,7 +34,7 @@
                     \override
                         #'(font-name . "STIXGeneral Bold")
                         \caps
-                            Fandango
+                            Introduction
                 }
             ^ \markup {
               \huge
