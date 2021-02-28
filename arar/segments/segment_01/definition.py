@@ -49,6 +49,12 @@ mark_135 = abjad.LilyPondLiteral(
     format_slot="after",
 )
 
+section_title = abjad.Markup(
+    r"""\markup { \box \override #'(font-name . "STIXGeneral Bold") \caps Introduction}""",
+    direction=abjad.Up,
+    literal=True,
+)
+
 maker = evans.SegmentMaker(
     instruments=insts,
     names=[
@@ -632,13 +638,7 @@ maker = evans.SegmentMaker(
         ),
         evans.attach(
             "Global Context",
-            abjad.Markup(
-                "Introduction",
-                direction=abjad.Up,
-            )
-            .caps()
-            .override(("font-name", "STIXGeneral Bold"))
-            .box(),
+            section_title,
             baca.leaf(0),
         ),
         evans.attach(

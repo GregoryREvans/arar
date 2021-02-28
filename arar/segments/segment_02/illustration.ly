@@ -4,14 +4,6 @@
 \include "/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily"           %! abjad.LilyPondFile._get_formatted_includes()
 \include "/Users/evansdsg2/Scores/arar/arar/build/first_stylesheet.ily"        %! abjad.LilyPondFile._get_formatted_includes()
 
-\header {                                                                      %! abjad.LilyPondFile._get_formatted_blocks()
-    tagline = ##f
-}                                                                              %! abjad.LilyPondFile._get_formatted_blocks()
-
-\layout {}
-
-\paper {}
-
 \score {                                                                       %! abjad.LilyPondFile._get_formatted_blocks()
 
     \context Score = "arar Score"
@@ -23,19 +15,9 @@
 
             \tempo 4=98
             \time 4/4                                                          %! scaling time signatures
-            \mark \markup {
-                \bold
-                    {
-                    }
-                }
+            \mark \markup \bold {  }
             s1 * 1
-            ^ \markup {
-                \box
-                    \override
-                        #'(font-name . "STIXGeneral Bold")
-                        \caps
-                            A
-                }
+            ^ \markup \box \override #'(font-name . "STIXGeneral Bold") \caps A
             ^ \markup {
               \huge
               \concat {
@@ -119,9 +101,9 @@
                             % [Voice 1 measure 1]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \set Staff.shortInstrumentName =                   %! applying staff names and clefs
-                            \markup { bf. }                                    %! applying staff names and clefs
+                            \markup { \hcenter-in #12 "bf." }                  %! applying staff names and clefs
                             \set Staff.instrumentName =                        %! applying staff names and clefs
-                            "Bass Flute"                                       %! applying staff names and clefs
+                            \markup { \hcenter-in #14 "Bass Flute" }           %! applying staff names and clefs
                             r8
                             \p
 
@@ -401,10 +383,7 @@
 
                         \once \override MultiMeasureRest.color = #white        %! applying ending skips
                         R1 * 3/32
-                        ^ \markup {                                            %! applying ending skips
-                            \musicglyph                                        %! applying ending skips
-                                #"scripts.ushortfermata"                       %! applying ending skips
-                            }                                                  %! applying ending skips
+                        ^ \markup \center-align \musicglyph #"scripts.ushortfermata" %! applying ending skips
                         \stopStaff \startStaff                                 %! applying ending skips
 
                     }
@@ -424,15 +403,15 @@
                         % [Voice 2 measure 1]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                         \set Staff.shortInstrumentName =                       %! applying staff names and clefs
-                        \markup { gt. }                                        %! applying staff names and clefs
+                        \markup { \hcenter-in #12 "gt." }                      %! applying staff names and clefs
                         \set Staff.instrumentName =                            %! applying staff names and clefs
-                        "Guitar"                                               %! applying staff names and clefs
+                        \markup { \hcenter-in #14 "Guitar" }                   %! applying staff names and clefs
                         \once \override Staff.Tie.transparent = ##t
                         \once \override Dots.staff-position = #1.75
                         a4
                         \p
                         - \accent
-                        ^ \markup {gliss string 5 with tuning key}
+                        ^ \markup {detune string 5}
                         \glissando                                             %! abjad.glissando(7)
 
                         \once \override Staff.Tie.transparent = ##t
@@ -668,10 +647,7 @@
                         \once \override Staff.Tie.transparent = ##t
                         \once \override Dots.staff-position = #1.75
                         R1 * 3/32
-                        ^ \markup {                                            %! applying ending skips
-                            \musicglyph                                        %! applying ending skips
-                                #"scripts.ushortfermata"                       %! applying ending skips
-                            }                                                  %! applying ending skips
+                        ^ \markup \center-align \musicglyph #"scripts.ushortfermata" %! applying ending skips
                         \stopStaff \startStaff                                 %! applying ending skips
 
                     }

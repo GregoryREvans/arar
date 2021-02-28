@@ -67,6 +67,12 @@ mark_135 = abjad.LilyPondLiteral(
     format_slot="after",
 )
 
+section_title = abjad.Markup(
+    r"""\markup \box \override #'(font-name . "STIXGeneral Bold") \caps A""",
+    direction=abjad.Up,
+    literal=True,
+)
+
 maker = evans.SegmentMaker(
     instruments=insts,
     names=[
@@ -298,7 +304,7 @@ maker = evans.SegmentMaker(
         evans.attach(
             "Voice 2",
             abjad.Markup(
-                r"\markup {gliss string 5 with tuning key}",
+                r"\markup {detune string 5}",
                 direction=abjad.Up,
                 literal=True,
             ),
@@ -315,13 +321,7 @@ maker = evans.SegmentMaker(
         ),
         evans.attach(
             "Global Context",
-            abjad.Markup(
-                "A",
-                direction=abjad.Up,
-            )
-            .caps()
-            .override(("font-name", "STIXGeneral Bold"))
-            .box(),
+            section_title,
             baca.leaf(0),
         ),
         evans.attach(

@@ -195,3 +195,66 @@ guitar_rhythm_handler_two = evans.RhythmHandler(
     forget=False,
     name="guitar_rhythm_handler_two",
 )
+
+###
+###
+
+flute_rmaker_three = rmakers.stack(
+    evans.RTMMaker(
+        [
+            "(1 (1 (1 (-1 1)) -1 1))",
+            "(1 (-2 (2 (1 1 1)) -1 (3 (1 1 1 1))))",
+            "(1 ((2 (1 1 1 1 1 1)) (3 (1 1 1 1 1)) 2 1))",
+            "(1 (2 3 3))",
+            "(1 (3 3 2))",
+            "(1 (-1 1 1 -1))",
+            "(1 (1 (1 (1 1 1 1)) 1))",
+            "(1 ((1 (1 1 1 1)) 1 1))",
+            "(1 (2 (1 (1 1 1 1)) 2))",
+            "(1 ((1 (1 1 1 1)) 2 2))",
+            "(1 (3 3 2 2 2))",
+            "(1 (3 4 1 2 2))",
+            "(1 (-2 3 2 2 2 1))",
+            "(1 (-2 4 1 2 3))",
+            "(1 (-2 5 2 2 1))",
+        ]
+    ),
+    rmakers.trivialize(abjad.select().tuplets()),
+    rmakers.extract_trivial(abjad.select().tuplets()),
+    rmakers.rewrite_rest_filled(abjad.select().tuplets()),
+    rmakers.rewrite_sustained(abjad.select().tuplets()),
+)
+
+flute_rhythm_handler_three = evans.RhythmHandler(
+    rmaker=flute_rmaker_three,
+    forget=False,
+    name="flute_rhythm_handler_three",
+)
+
+guitar_rmaker_three = rmakers.stack(
+    evans.RTMMaker(
+        [
+            "(1 (1 (1 (1 1 1 1)) 1))",
+            "(1 ((1 (1 1 1 1)) 1 1))",
+            "(1 (2 (1 (1 1 1 1)) 2))",
+            "(1 ((1 (1 1 1 1)) 2 2))",
+            "(1 (3 (1 (1 1 1 1)) 3))",
+            "(1 ((1 (1 1 1 1)) 3 3))",
+            "(1 (4 (1 (1 1 1 1)) 4))",
+            "(1 ((1 (1 1 1 1)) 4 4))",
+            "(1 (2 3 3))",
+            "(1 (3 3 2))",
+            "(1 (1 1 1))",
+        ]
+    ),
+    rmakers.trivialize(abjad.select().tuplets()),
+    rmakers.extract_trivial(abjad.select().tuplets()),
+    rmakers.rewrite_rest_filled(abjad.select().tuplets()),
+    rmakers.rewrite_sustained(abjad.select().tuplets()),
+)
+
+guitar_rhythm_handler_three = evans.RhythmHandler(
+    rmaker=guitar_rmaker_three,
+    forget=False,
+    name="guitar_rhythm_handler_three",
+)

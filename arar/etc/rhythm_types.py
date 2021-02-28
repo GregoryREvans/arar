@@ -41,7 +41,7 @@ abjad.attach(abjad.TimeSignature(durs[0]), abjad.select(staff).leaf(0))
 
 markup = abjad.Markup.column(
     [
-        abjad.Markup(_)
+        abjad.Markup(fr"\markup {{ {_} }}", literal=True)
         for _ in [
             "(1 (1 1 1 1 1 1 1 1 1 1 1 1))",
             "(1 ((1 (1 1 1)) (1 (1 1 1)) (1 (1 1 1)) (1 (1 1 1))))",
