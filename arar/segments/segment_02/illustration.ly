@@ -105,9 +105,9 @@
                             \set Staff.instrumentName =                        %! applying staff names and clefs
                             \markup { \hcenter-in #14 "Bass Flute" }           %! applying staff names and clefs
                             r8
-                            \p
 
                             a''4
+                            \p
 
                         }
 

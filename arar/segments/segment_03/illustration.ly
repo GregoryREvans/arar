@@ -13,7 +13,7 @@
         {
             % [Global Context measure 1]                                       %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-            \tempo 4=140
+            \tempo 4=120
             \time 3/4                                                          %! scaling time signatures
             \mark \markup \bold {  }
             s1 * 3/4
@@ -21,7 +21,7 @@
             ^ \markup {
               \huge
               \concat {
-                  \abjad-metronome-mark-markup #2 #0 #1 #"140"
+                  \abjad-metronome-mark-markup #2 #0 #1 #"120"
               }
             }
             % [Global Context measure 2]                                       %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -447,15 +447,15 @@
                         \times 6/7 {
                             % [Voice 2 measure 5]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            af4.
+                            c'4.
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            ef'32
+                            g'32
                             [
 
-                            a''32
+                            a'32
 
-                            a''32
+                            ef'32
 
                             \revert Staff.Stem.stemlet-length
                             a''32
@@ -471,20 +471,20 @@
                             % [Voice 2 measure 6]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            <cs' f'>32
+                            cs'''32
                             [
 
-                            <cs' f'>32
+                            g''32
 
-                            <cs' f'>32
+                            cs''32
 
                             \revert Staff.Stem.stemlet-length
-                            <cs' f'>32
+                            fs'32
                             ]
 
-                            <fs' e''>4.
+                            a4.
 
-                            <cs' c''>4.
+                            <cs' f'>4.
 
                         }
 
@@ -492,21 +492,21 @@
                         \times 2/3 {
                             % [Voice 2 measure 7]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            af2
+                            <ef' af'>2
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            ef'32
+                            d''32
                             [
 
-                            a''32
+                            cs'''32
 
                             a''32
 
                             \revert Staff.Stem.stemlet-length
-                            a''32
+                            af''32
                             ]
 
-                            d''2
+                            f''2
 
                         }
 
@@ -515,20 +515,20 @@
                             % [Voice 2 measure 8]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            <cs' f'>32
+                            d''32
                             [
 
-                            <cs' f'>32
+                            f'32
 
-                            <cs' f'>32
+                            c'32
 
                             \revert Staff.Stem.stemlet-length
-                            <cs' f'>32
+                            fs'32
                             ]
 
-                            <fs' e''>2
+                            e''2
 
-                            <cs' c''>2
+                            g2
 
                         }
 
@@ -537,11 +537,11 @@
                         \times 3/4 {
                             % [Voice 2 measure 9]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            g''4
-
-                            cs''4.
+                            a4
 
                             fs'4.
+
+                            cs''4.
 
                         }
 
@@ -550,11 +550,11 @@
                         \times 3/4 {
                             % [Voice 2 measure 10]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            a'4.
+                            <g' a'>4.
 
-                            cs'4.
+                            fs'4.
 
-                            f'4
+                            a4
                             \bar "||"
 
                         }

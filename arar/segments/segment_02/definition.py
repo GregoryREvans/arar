@@ -161,8 +161,8 @@ maker = evans.SegmentMaker(
             "Voice 1", flat_gliss, abjad.select().leaves(pitched=True).get([24, 25])
         ),
         evans.call("Voice 2", flat_gliss, abjad.select()),
-        evans.attach("Voice 1", abjad.Dynamic("p"), baca.leaf(0)),
-        evans.attach("Voice 2", abjad.Dynamic("p"), baca.leaf(0)),
+        evans.attach("Voice 1", abjad.Dynamic("p"), baca.leaf(0, pitched=True)),
+        evans.attach("Voice 2", abjad.Dynamic("p"), baca.leaf(0, pitched=True)),
         evans.attach("Voice 2", abjad.Articulation("accent"), baca.leaf(0)),
         evans.attach("Voice 2", abjad.Articulation("staccato"), baca.leaf(1)),
         evans.attach("Voice 2", abjad.Articulation("staccato"), baca.leaf(2)),

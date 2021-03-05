@@ -18,13 +18,13 @@ def hide_tuplet_bracket(selections):
         tuplet.hide = True
 
 
-met_140 = abjad.MetronomeMark.make_tempo_equation_markup((1, 4), 140)
-mark_140 = abjad.LilyPondLiteral(
+met_120 = abjad.MetronomeMark.make_tempo_equation_markup((1, 4), 120)
+mark_120 = abjad.LilyPondLiteral(
     [
         r"^ \markup {",
         r"  \huge",
         r"  \concat {",
-        f"      {str(met_140)[8:]}",
+        f"      {str(met_120)[8:]}",
         r"  }",
         r"}",
     ],
@@ -110,7 +110,7 @@ maker = evans.SegmentMaker(
         ),
         evans.attach(
             "Global Context",
-            mark_140,
+            mark_120,
             baca.leaf(0),
         ),
     ],
@@ -130,7 +130,7 @@ maker = evans.SegmentMaker(
     beam_rests=True,
     mm_rests=False,
     barline="||",
-    tempo=((1, 4), 140),
+    tempo=((1, 4), 120),
     rehearsal_mark="",
     page_break_counts=[90],
 )

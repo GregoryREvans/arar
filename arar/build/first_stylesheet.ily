@@ -9,18 +9,18 @@
 \header {
 	tagline = ##f
 	breakbefore = ##t
-	dedication = \markup \override #'(font-name . "STIXGeneral") \fontsize #1 \center-column {\line{"alearear"} \fontsize #3 \with-color #white \line{"."} }
+	%dedication = \markup \override #'(font-name . "STIXGeneral") \fontsize #1 \center-column {\line{"Zaharat Alearear"} \fontsize #3 \with-color #white \line{"."} }
 	title = \markup \override #'(font-name . "Al Nile") \fontsize #12 \center-column {"زهرة العرعر"}
-	subtitle = \markup \override #'(font-name . "STIXGeneral") \fontsize #4 \center-column {\with-color #white \line{"."} \fontsize #2 \with-color #black \line{"el olor a enebro con tierra caliente"} } % f o r   s t r i n g   q u a r t e t
+	subtitle = \markup \override #'(font-name . "STIXGeneral") \fontsize #4 \center-column {\with-color #white \line{"."} \fontsize #2 \with-color #black \line{"Z a h r a t   A l e a r e a r"} } % f o r   s t r i n g   q u a r t e t
 	subsubtitle = \markup \override #'(font-name . "STIXGeneral") \fontsize #3 \center-column {\with-color #white \line{"."} \fontsize #1 \with-color #black \line{"for bass flute and guitar"} } % from the museums of sleep
 	composer = \markup \override #'(font-name . "STIXGeneral") \center-column {\line{\fontsize #1 {"G r e g o r y  R o w l a n d  E v a n s (*1995)"}} \line{ \vspace #4 }}
 }
 
 \layout {
-    %{ \accidentalStyle forget %}
+    \accidentalStyle forget
 	%{ \accidentalStyle modern %}
 	%{ \accidentalStyle modern-cautionary %}
-	\accidentalStyle dodecaphonic
+	%{ \accidentalStyle dodecaphonic %}
     indent = #15
 	ragged-last = ##t
     ragged-right = ##t
@@ -126,7 +126,7 @@
 		\override TupletNumber.font-size = #1
         \override TupletNumber.text = #tuplet-number::calc-fraction-text
 		autoBeaming = ##f
-		proportionalNotationDuration = #(ly:make-moment 2 24)
+		proportionalNotationDuration = #(ly:make-moment 1 20)
         tupletFullLength = ##t
     }
 	\context {
