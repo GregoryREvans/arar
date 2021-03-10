@@ -1,7 +1,7 @@
 \version "2.19.84"
 \language "english"
 #(set-default-paper-size "letterportrait")
-#(set-global-staff-size 13) % was 12. Try 12.5?
+#(set-global-staff-size 12) % was 13. Try 12.5?
 \include "/Users/evansdsg2/evans/lilypond/evans-markups.ily"
 \include "/Users/evansdsg2/evans/lilypond/evans-spanners.ily"
 \include "/Users/evansdsg2/baca/lilypond/baca.ily"
@@ -126,7 +126,7 @@
 		\override TupletNumber.font-size = #1
         \override TupletNumber.text = #tuplet-number::calc-fraction-text
 		autoBeaming = ##f
-		proportionalNotationDuration = #(ly:make-moment 1 20)
+		proportionalNotationDuration = #(ly:make-moment 1 22)
         tupletFullLength = ##t
     }
 	\context {

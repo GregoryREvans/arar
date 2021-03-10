@@ -303,3 +303,73 @@ guitar_rhythm_handler_four = evans.RhythmHandler(
     forget=False,
     name="guitar_rhythm_handler_four",
 )
+
+###
+###
+
+guitar_rmaker_five = rmakers.stack(
+    evans.RTMMaker(
+        [
+            "(1 (1 1 1 1 1))",
+        ]
+    ),
+    rmakers.trivialize(abjad.select().tuplets()),
+    rmakers.extract_trivial(abjad.select().tuplets()),
+    rmakers.rewrite_rest_filled(abjad.select().tuplets()),
+    rmakers.rewrite_sustained(abjad.select().tuplets()),
+)
+
+guitar_rhythm_handler_five = evans.RhythmHandler(
+    rmaker=guitar_rmaker_five,
+    forget=False,
+    name="guitar_rhythm_handler_five",
+)
+
+###
+###
+
+flute_rmaker_six = rmakers.stack(
+    evans.RTMMaker(
+        [
+            "(1 (4 (1 (1 1 1 1 1))))",
+            "(1 (3 (1 (1 1 1 1))))",
+            "(1 ((1 (1 1)) 1))",
+            "(1 ((1 (1 1 1)) 3))",
+            "(1 (2 (1 (1 1))))",
+            "(1 ((1 (1 1 1)) (1 (1 1 1 1))))",
+        ]
+    ),
+    rmakers.trivialize(abjad.select().tuplets()),
+    rmakers.extract_trivial(abjad.select().tuplets()),
+    rmakers.rewrite_rest_filled(abjad.select().tuplets()),
+    rmakers.rewrite_sustained(abjad.select().tuplets()),
+)
+
+flute_rhythm_handler_six = evans.RhythmHandler(
+    rmaker=flute_rmaker_six,
+    forget=False,
+    name="flute_rhythm_handler_six",
+)
+
+guitar_rmaker_six = rmakers.stack(
+    evans.RTMMaker(
+        [
+            "(1 (4 (1 (1 1 1 1 1))))",
+            "(1 (3 (1 (1 1 1 1))))",
+            "(1 ((1 (1 1)) 1))",
+            "(1 ((1 (1 1 1)) 3))",
+            "(1 (2 (1 (1 1))))",
+            "(1 ((1 (1 1 1)) (1 (1 1 1 1))))",
+        ]
+    ),
+    rmakers.trivialize(abjad.select().tuplets()),
+    rmakers.extract_trivial(abjad.select().tuplets()),
+    rmakers.rewrite_rest_filled(abjad.select().tuplets()),
+    rmakers.rewrite_sustained(abjad.select().tuplets()),
+)
+
+guitar_rhythm_handler_six = evans.RhythmHandler(
+    rmaker=guitar_rmaker_six,
+    forget=False,
+    name="guitar_rhythm_handler_six",
+)
