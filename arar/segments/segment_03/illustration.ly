@@ -60,11 +60,6 @@
 
             \time 3/4                                                          %! scaling time signatures
             s1 * 3/4
-            % [Global Context measure 11]                                      %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-            \once \override Score.TimeSignature.stencil = ##f                  %! applying ending skips
-            \time 3/16                                                         %! scaling time signatures
-            s1 * 3/16
 
         }
 
@@ -332,16 +327,6 @@
                             \bar "||"
 
                         }
-                        % [Voice 1 measure 11]                                 %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying ending skips
-                        \once \override Rest.color = #white                    %! applying ending skips
-                        r1 * 3/32
-
-                        \once \override MultiMeasureRest.color = #white        %! applying ending skips
-                        R1 * 3/32
-                        ^ \markup \center-align \musicglyph #"scripts.ushortfermata" %! applying ending skips
-                        \stopStaff \startStaff                                 %! applying ending skips
 
                     }
 
@@ -558,16 +543,6 @@
                             \bar "||"
 
                         }
-                        % [Voice 2 measure 11]                                 %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
-
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff %! applying ending skips
-                        \once \override Rest.color = #white                    %! applying ending skips
-                        r1 * 3/32
-
-                        \once \override MultiMeasureRest.color = #white        %! applying ending skips
-                        R1 * 3/32
-                        ^ \markup \center-align \musicglyph #"scripts.ushortfermata" %! applying ending skips
-                        \stopStaff \startStaff                                 %! applying ending skips
 
                     }
 

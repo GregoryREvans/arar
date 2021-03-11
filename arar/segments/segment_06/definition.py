@@ -8,6 +8,7 @@ from arar.materials.score_structure.instruments import instruments as insts
 from arar.materials.score_structure.score_structure import score
 from arar.materials.score_structure.segment_06.time_signatures import time_signatures
 from arar.materials.timespans.segment_06.convert_timespans import (  # handler_commands,
+    handler_commands,
     rhythm_commands,
 )
 
@@ -54,7 +55,7 @@ maker = evans.SegmentMaker(
             abjad.select().components(abjad.Score),
         ),
         "skips",
-        # handler_commands,
+        handler_commands,
         # evans.call(
         #     "vertical",
         #     global_pitch_handler,

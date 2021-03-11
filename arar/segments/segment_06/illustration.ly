@@ -149,22 +149,25 @@
                         \times 3/5 {
                             % [Voice 1 measure 5]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            c'1
+                            \pitchedTrill
+                            e''1
+                            \startTrillSpan f''
 
                             \times 4/5 {
 
                                 \override Staff.Stem.stemlet-length = 0.75
-                                c'16
+                                e''16
                                 [
+                                \stopTrillSpan
 
-                                c'16
+                                e''16
 
-                                c'16
+                                e''16
 
-                                c'16
+                                e''16
 
                                 \revert Staff.Stem.stemlet-length
-                                c'16
+                                e''16
                                 ]
 
                             }
@@ -172,123 +175,135 @@
                         }
                         % [Voice 1 measure 6]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                        c'4
+                        \pitchedTrill
+                        e''4
                         ~
+                        \startTrillSpan f''
 
                         \override Staff.Stem.stemlet-length = 0.75
-                        c'8
+                        e''8
                         [
 
-                        c'32
+                        e''32
+                        \stopTrillSpan
 
-                        c'32
+                        e''32
 
-                        c'32
+                        e''32
 
                         \revert Staff.Stem.stemlet-length
-                        c'32
+                        e''32
                         ]
                         % [Voice 1 measure 7]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                         \override Staff.Stem.stemlet-length = 0.75
-                        c'8.
+                        e''8.
                         [
 
                         \revert Staff.Stem.stemlet-length
-                        c'16
+                        e''16
                         ~
                         ]
 
                         \override Staff.Stem.stemlet-length = 0.75
-                        c'8
+                        e''8
                         [
 
                         \revert Staff.Stem.stemlet-length
-                        c'8
+                        e''8
                         ~
                         ]
 
-                        c'4
+                        e''4
 
                         \times 2/3 {
                             % [Voice 1 measure 8]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            c'8
+                            e''8
                             [
 
-                            c'8
+                            e''8
 
                             \revert Staff.Stem.stemlet-length
-                            c'8
+                            e''8
                             ]
 
                         }
 
-                        c'2.
+                        \pitchedTrill
+                        e''2.
+                        \startTrillSpan f''
 
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 5/6 {
                             % [Voice 1 measure 9]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            c'1
+                            \pitchedTrill
+                            e''1
+                            \startTrillSpan f''
+                            \stopTrillSpan
 
-                            c'4
+                            e''4
+                            \stopTrillSpan
 
-                            c'4
+                            e''4
 
                         }
                         % [Voice 1 measure 10]                                 %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                        c'4
+                        e''4
 
-                        c'4
+                        e''4
 
-                        c'4
+                        e''4
 
                         \override Staff.Stem.stemlet-length = 0.75
-                        c'8.
+                        e''8.
                         [
 
                         \revert Staff.Stem.stemlet-length
-                        c'16
+                        e''16
                         ~
                         ]
 
                         \override Staff.Stem.stemlet-length = 0.75
-                        c'8
+                        e''8
                         [
 
                         \revert Staff.Stem.stemlet-length
-                        c'8
+                        e''8
                         ~
                         ]
 
                         \override Staff.Stem.stemlet-length = 0.75
-                        c'16
+                        e''16
                         [
 
                         \revert Staff.Stem.stemlet-length
-                        c'8.
+                        e''8.
                         ]
                         % [Voice 1 measure 11]                                 %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                        c'1
+                        \pitchedTrill
+                        e''1
+                        \startTrillSpan f''
 
                         \times 4/5 {
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            c'16
+                            e''16
                             [
+                            \stopTrillSpan
 
-                            c'16
+                            e''16
 
-                            c'16
+                            e''16
 
-                            c'16
+                            e''16
 
                             \revert Staff.Stem.stemlet-length
-                            c'16
+                            e''16
                             ]
 
                         }
@@ -296,9 +311,24 @@
                         \times 4/7 {
                             % [Voice 1 measure 12]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            c'1.
+                            \once \override Staff.Tie.transparent = ##t
+                            \once \override Dots.staff-position = #1.75
+                            f''1.
+                            :32
+                            \glissando                                         %! abjad.glissando(7)
 
-                            c'4
+                            \once \override Staff.Tie.transparent = ##t
+                            \once \override Dots.staff-position = #1.75
+                            \hide NoteHead                                     %! abjad.glissando(1)
+                            \override Accidental.stencil = ##f                 %! abjad.glissando(1)
+                            \override NoteColumn.glissando-skip = ##t          %! abjad.glissando(1)
+                            \override NoteHead.no-ledgers = ##t                %! abjad.glissando(1)
+                            \revert Accidental.stencil                         %! abjad.glissando(6)
+                            \revert NoteColumn.glissando-skip                  %! abjad.glissando(6)
+                            \revert NoteHead.no-ledgers                        %! abjad.glissando(6)
+                            \undo \hide NoteHead                               %! abjad.glissando(6)
+                            f''4
+                            :32
 
                         }
 
@@ -306,18 +336,48 @@
                         \times 3/4 {
                             % [Voice 1 measure 13]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            c'2.
+                            \once \override Staff.Tie.transparent = ##t
+                            \once \override Dots.staff-position = #1.75
+                            f''2.
+                            :32
+                            \glissando                                         %! abjad.glissando(7)
 
-                            c'4
+                            \once \override Staff.Tie.transparent = ##t
+                            \once \override Dots.staff-position = #1.75
+                            \hide NoteHead                                     %! abjad.glissando(1)
+                            \override Accidental.stencil = ##f                 %! abjad.glissando(1)
+                            \override NoteColumn.glissando-skip = ##t          %! abjad.glissando(1)
+                            \override NoteHead.no-ledgers = ##t                %! abjad.glissando(1)
+                            \revert Accidental.stencil                         %! abjad.glissando(6)
+                            \revert NoteColumn.glissando-skip                  %! abjad.glissando(6)
+                            \revert NoteHead.no-ledgers                        %! abjad.glissando(6)
+                            \undo \hide NoteHead                               %! abjad.glissando(6)
+                            f''4
+                            :32
 
                         }
 
                         \times 4/5 {
                             % [Voice 1 measure 14]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            c'2
+                            \once \override Staff.Tie.transparent = ##t
+                            \once \override Dots.staff-position = #1.75
+                            e''2
+                            :32
+                            \glissando                                         %! abjad.glissando(7)
 
-                            c'8
+                            \once \override Staff.Tie.transparent = ##t
+                            \once \override Dots.staff-position = #1.75
+                            \hide NoteHead                                     %! abjad.glissando(1)
+                            \override Accidental.stencil = ##f                 %! abjad.glissando(1)
+                            \override NoteColumn.glissando-skip = ##t          %! abjad.glissando(1)
+                            \override NoteHead.no-ledgers = ##t                %! abjad.glissando(1)
+                            \revert Accidental.stencil                         %! abjad.glissando(6)
+                            \revert NoteColumn.glissando-skip                  %! abjad.glissando(6)
+                            \revert NoteHead.no-ledgers                        %! abjad.glissando(6)
+                            \undo \hide NoteHead                               %! abjad.glissando(6)
+                            e''8
+                            :32
 
                         }
 
@@ -325,26 +385,41 @@
                         \times 3/4 {
                             % [Voice 1 measure 15]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            c'2.
+                            \once \override Staff.Tie.transparent = ##t
+                            \once \override Dots.staff-position = #1.75
+                            cs''2.
+                            :32
+                            \glissando                                         %! abjad.glissando(7)
 
-                            c'4
+                            \once \override Staff.Tie.transparent = ##t
+                            \once \override Dots.staff-position = #1.75
+                            \hide NoteHead                                     %! abjad.glissando(1)
+                            \override Accidental.stencil = ##f                 %! abjad.glissando(1)
+                            \override NoteColumn.glissando-skip = ##t          %! abjad.glissando(1)
+                            \override NoteHead.no-ledgers = ##t                %! abjad.glissando(1)
+                            \revert Accidental.stencil                         %! abjad.glissando(6)
+                            \revert NoteColumn.glissando-skip                  %! abjad.glissando(6)
+                            \revert NoteHead.no-ledgers                        %! abjad.glissando(6)
+                            \undo \hide NoteHead                               %! abjad.glissando(6)
+                            cs''4
+                            :32
 
                         }
                         % [Voice 1 measure 16]                                 %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                        c'4
+                        f''4
 
                         \override Staff.Stem.stemlet-length = 0.75
                         r8
                         [
 
                         \revert Staff.Stem.stemlet-length
-                        c'8
+                        gs''8
                         ]
 
                         r4
 
-                        c'4
+                        cs''4
 
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 5/8 {
@@ -354,11 +429,12 @@
 
                             \times 2/3 {
 
-                                c'4
+                                a'4
+                                - \accent
 
-                                c'4
+                                d'4
 
-                                c'4
+                                e'4
 
                             }
 
@@ -366,14 +442,14 @@
                             r4
                             [
 
-                            c'8.
+                            cs''8.
 
-                            c'8.
+                            c'''8.
 
-                            c'8.
+                            cs'''8.
 
                             \revert Staff.Stem.stemlet-length
-                            c'8.
+                            a''8.
                             ]
 
                         }
@@ -382,19 +458,20 @@
                             % [Voice 1 measure 18]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            c'16
+                            f'''16
+                            - \accent
                             [
 
-                            c'16
+                            f''16
 
-                            c'16
+                            gs''16
 
-                            c'16
+                            cs''16
 
-                            c'16
+                            a'16
 
                             \revert Staff.Stem.stemlet-length
-                            c'16
+                            d'16
                             ]
 
                         }
@@ -403,43 +480,74 @@
                         \times 3/5 {
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            c'8
+                            e'8
                             [
 
-                            c'8
+                            cs''8
+                            - \accent
 
-                            c'8
+                            c'''8
 
-                            c'8
+                            cs'''8
 
                             \revert Staff.Stem.stemlet-length
-                            c'8
+                            a''8
                             ]
 
                         }
 
-                        c'8
+                        f'''8
                         ~
 
                         \override Staff.Stem.stemlet-length = 0.75
-                        c'8
+                        f'''8
                         [
 
                         \revert Staff.Stem.stemlet-length
-                        c'8
+                        f''8
                         ]
                         % [Voice 1 measure 19]                                 %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                        c'2
+                        \once \override Staff.Tie.transparent = ##t
+                        \once \override Dots.staff-position = #1.75
+                        c'''2
+                        :32
+                        \glissando                                             %! abjad.glissando(7)
 
-                        c'4
+                        \once \override Staff.Tie.transparent = ##t
+                        \once \override Dots.staff-position = #1.75
+                        \hide NoteHead                                         %! abjad.glissando(1)
+                        \override Accidental.stencil = ##f                     %! abjad.glissando(1)
+                        \override NoteColumn.glissando-skip = ##t              %! abjad.glissando(1)
+                        \override NoteHead.no-ledgers = ##t                    %! abjad.glissando(1)
+                        \revert Accidental.stencil                             %! abjad.glissando(6)
+                        \revert NoteColumn.glissando-skip                      %! abjad.glissando(6)
+                        \revert NoteHead.no-ledgers                            %! abjad.glissando(6)
+                        \undo \hide NoteHead                                   %! abjad.glissando(6)
+                        c'''4
+                        :32
 
                         \times 4/7 {
                             % [Voice 1 measure 20]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            c'2.
+                            \once \override Staff.Tie.transparent = ##t
+                            \once \override Dots.staff-position = #1.75
+                            c'''2.
+                            :32
+                            \glissando                                         %! abjad.glissando(7)
 
-                            c'8
+                            \once \override Staff.Tie.transparent = ##t
+                            \once \override Dots.staff-position = #1.75
+                            \hide NoteHead                                     %! abjad.glissando(1)
+                            \override Accidental.stencil = ##f                 %! abjad.glissando(1)
+                            \override NoteColumn.glissando-skip = ##t          %! abjad.glissando(1)
+                            \override NoteHead.no-ledgers = ##t                %! abjad.glissando(1)
+                            \revert Accidental.stencil                         %! abjad.glissando(6)
+                            \revert NoteColumn.glissando-skip                  %! abjad.glissando(6)
+                            \revert NoteHead.no-ledgers                        %! abjad.glissando(6)
+                            \undo \hide NoteHead                               %! abjad.glissando(6)
+                            c'''8
+                            :32
 
                         }
 
@@ -447,45 +555,50 @@
                         \times 3/4 {
                             % [Voice 1 measure 21]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            c'2.
+                            \pitchedTrill
+                            e''2.
+                            \startTrillSpan f''
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            c'16
+                            e''16
                             [
+                            \stopTrillSpan
 
-                            c'16
+                            e''16
 
-                            c'16
+                            e''16
 
                             \revert Staff.Stem.stemlet-length
-                            c'16
+                            e''16
                             ]
 
                         }
                         % [Voice 1 measure 22]                                 %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                        c'4
+                        e''4
 
-                        c'4
+                        e''4
 
-                        c'2
+                        e''2
 
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 10/24 {
                             % [Voice 1 measure 23]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            c'4
+                            e''4
 
-                            c'4
+                            e''4
 
-                            c'4
+                            e''4
 
                         }
 
-                        c'8.
+                        \pitchedTrill
+                        e''8.
                         ~
+                        \startTrillSpan f''
 
-                        c'2.
+                        e''2.
                         \bar "||"
 
                     }
@@ -511,22 +624,25 @@
                             \markup { \hcenter-in #12 "gt." }                  %! applying staff names and clefs
                             \set Staff.instrumentName =                        %! applying staff names and clefs
                             \markup { \hcenter-in #14 "Guitar" }               %! applying staff names and clefs
-                            c'1
+                            \pitchedTrill
+                            e1
+                            \startTrillSpan f
 
                             \times 4/5 {
 
                                 \override Staff.Stem.stemlet-length = 0.75
-                                c'16
+                                e16
                                 [
+                                \stopTrillSpan
 
-                                c'16
+                                e16
 
-                                c'16
+                                e16
 
-                                c'16
+                                e16
 
                                 \revert Staff.Stem.stemlet-length
-                                c'16
+                                e16
                                 ]
 
                             }
@@ -534,29 +650,34 @@
                         }
                         % [Voice 2 measure 2]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                        c'2.
+                        \pitchedTrill
+                        e2.
+                        \startTrillSpan f
 
                         \override Staff.Stem.stemlet-length = 0.75
-                        c'16
+                        e16
                         [
+                        \stopTrillSpan
 
-                        c'16
+                        e16
 
-                        c'16
+                        e16
 
                         \revert Staff.Stem.stemlet-length
-                        c'16
+                        e16
                         ]
 
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 5/8 {
                             % [Voice 2 measure 3]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            c'2
+                            e2
 
-                            c'2
+                            e2
 
-                            c'1
+                            \pitchedTrill
+                            e1
+                            \startTrillSpan f
 
                         }
 
@@ -564,28 +685,35 @@
                             % [Voice 2 measure 4]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            c'8
+                            e8
                             [
+                            \stopTrillSpan
 
-                            c'8
+                            e8
 
                             \revert Staff.Stem.stemlet-length
-                            c'8
+                            e8
                             ]
 
                         }
 
-                        c'2.
+                        \pitchedTrill
+                        e2.
+                        \startTrillSpan f
                         % [Voice 2 measure 5]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                        c'2
+                        \pitchedTrill
+                        e2
+                        \startTrillSpan f
+                        \stopTrillSpan
 
                         \override Staff.Stem.stemlet-length = 0.75
-                        c'8
+                        e8
                         [
+                        \stopTrillSpan
 
                         \revert Staff.Stem.stemlet-length
-                        c'8
+                        e8
                         ]
                         % [Voice 2 measure 6]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -594,19 +722,52 @@
                         \times 4/5 {
                             % [Voice 2 measure 7]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
+                            \once \override Staff.Tie.transparent = ##t
+                            \once \override Dots.staff-position = #1.75
                             r8.
 
-                            c'2.
+                            \once \override Staff.Tie.transparent = ##t
+                            \once \override Dots.staff-position = #1.75
+                            <e c' f' af' b' e''>2.
+                            :32
+                            \glissando                                         %! abjad.glissando(7)
 
                         }
 
                         \times 4/7 {
                             % [Voice 2 measure 8]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            c'1
+                            \once \override Staff.Tie.transparent = ##t
+                            \once \override Dots.staff-position = #1.75
+                            \hide NoteHead                                     %! abjad.glissando(1)
+                            \override Accidental.stencil = ##f                 %! abjad.glissando(1)
+                            \override NoteColumn.glissando-skip = ##t          %! abjad.glissando(1)
+                            \override NoteHead.no-ledgers = ##t                %! abjad.glissando(1)
+                            <e c' f' af' b' e''>1
+                            :32
+                            :32
+                            \glissando                                         %! abjad.glissando(7)
 
-                            c'4.
+                            \once \override Staff.Tie.transparent = ##t
+                            \once \override Dots.staff-position = #1.75
+                            \revert Accidental.stencil                         %! abjad.glissando(6)
+                            \revert NoteColumn.glissando-skip                  %! abjad.glissando(6)
+                            \revert NoteHead.no-ledgers                        %! abjad.glissando(6)
+                            \undo \hide NoteHead                               %! abjad.glissando(6)
+                            \hide NoteHead                                     %! abjad.glissando(1)
+                            \override Accidental.stencil = ##f                 %! abjad.glissando(1)
+                            \override NoteColumn.glissando-skip = ##t          %! abjad.glissando(1)
+                            \override NoteHead.no-ledgers = ##t                %! abjad.glissando(1)
+                            \revert Accidental.stencil                         %! abjad.glissando(6)
+                            \revert NoteColumn.glissando-skip                  %! abjad.glissando(6)
+                            \revert NoteHead.no-ledgers                        %! abjad.glissando(6)
+                            \undo \hide NoteHead                               %! abjad.glissando(6)
+                            <e c' f' af' b' e''>4.
+                            :32
+                            :32
 
+                            \once \override Staff.Tie.transparent = ##t
+                            \once \override Dots.staff-position = #1.75
                             r4.
 
                         }
@@ -615,36 +776,67 @@
                         \times 10/17 {
                             % [Voice 2 measure 9]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
+                            \once \override Staff.Tie.transparent = ##t
+                            \once \override Dots.staff-position = #1.75
                             r4.
 
-                            c'1..
+                            \once \override Staff.Tie.transparent = ##t
+                            \once \override Dots.staff-position = #1.75
+                            <e d' f' bf' b' e''>1..
+                            :32
+                            \glissando                                         %! abjad.glissando(7)
 
                         }
                         % [Voice 2 measure 10]                                 %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                        c'2.
+                        \once \override Staff.Tie.transparent = ##t
+                        \once \override Dots.staff-position = #1.75
+                        \hide NoteHead                                         %! abjad.glissando(1)
+                        \override Accidental.stencil = ##f                     %! abjad.glissando(1)
+                        \override NoteColumn.glissando-skip = ##t              %! abjad.glissando(1)
+                        \override NoteHead.no-ledgers = ##t                    %! abjad.glissando(1)
+                        <e d' f' bf' b' e''>2.
+                        :32
+                        :32
+                        \glissando                                             %! abjad.glissando(7)
 
-                        c'2.
+                        \once \override Staff.Tie.transparent = ##t
+                        \once \override Dots.staff-position = #1.75
+                        \revert Accidental.stencil                             %! abjad.glissando(6)
+                        \revert NoteColumn.glissando-skip                      %! abjad.glissando(6)
+                        \revert NoteHead.no-ledgers                            %! abjad.glissando(6)
+                        \undo \hide NoteHead                                   %! abjad.glissando(6)
+                        \hide NoteHead                                         %! abjad.glissando(1)
+                        \override Accidental.stencil = ##f                     %! abjad.glissando(1)
+                        \override NoteColumn.glissando-skip = ##t              %! abjad.glissando(1)
+                        \override NoteHead.no-ledgers = ##t                    %! abjad.glissando(1)
+                        \revert Accidental.stencil                             %! abjad.glissando(6)
+                        \revert NoteColumn.glissando-skip                      %! abjad.glissando(6)
+                        \revert NoteHead.no-ledgers                            %! abjad.glissando(6)
+                        \undo \hide NoteHead                                   %! abjad.glissando(6)
+                        <e d' f' bf' b' e''>2.
+                        :32
+                        :32
 
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 5/6 {
                             % [Voice 2 measure 11]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            c'2
+                            af2
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            c'8
+                            ef'8
                             [
 
-                            c'8
+                            a''8
 
-                            c'8
+                            a''8
 
                             \revert Staff.Stem.stemlet-length
-                            c'8
+                            a''8
                             ]
 
-                            c'2
+                            d''2
 
                         }
 
@@ -652,20 +844,21 @@
                             % [Voice 2 measure 12]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            c'8
+                            <cs' f'>8
+                            - \accent
                             [
 
-                            c'8
+                            <cs' f'>8
 
-                            c'8
+                            <cs' f'>8
 
                             \revert Staff.Stem.stemlet-length
-                            c'8
+                            <cs' f'>8
                             ]
 
-                            c'2
+                            <fs' e''>2
 
-                            c'2
+                            <cs' c''>2
 
                         }
 
@@ -673,21 +866,22 @@
                         \times 3/5 {
                             % [Voice 2 measure 13]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            c'2
+                            af2
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            c'16
+                            ef'16
+                            - \accent
                             [
 
-                            c'16
+                            a''16
 
-                            c'16
+                            a''16
 
                             \revert Staff.Stem.stemlet-length
-                            c'16
+                            a''16
                             ]
 
-                            c'2
+                            d''2
 
                         }
 
@@ -695,75 +889,79 @@
                             % [Voice 2 measure 14]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            c'32
+                            <cs' f'>32
                             [
 
-                            c'32
+                            <cs' f'>32
 
-                            c'32
+                            <cs' f'>32
+                            - \accent
 
                             \revert Staff.Stem.stemlet-length
-                            c'32
+                            <cs' f'>32
                             ]
 
-                            c'4
+                            <fs' e''>4
 
-                            c'4
+                            <cs' c''>4
 
                         }
                         % [Voice 2 measure 15]                                 %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                         \override Staff.Stem.stemlet-length = 0.75
-                        c'8
+                        e8
                         [
 
                         \revert Staff.Stem.stemlet-length
-                        c'8
+                        e8
                         ]
 
                         \override Staff.Stem.stemlet-length = 0.75
-                        c'8
+                        e8
                         [
 
-                        c'16.
+                        e16.
 
                         \revert Staff.Stem.stemlet-length
-                        c'32
+                        e32
                         ~
                         ]
 
                         \override Staff.Stem.stemlet-length = 0.75
-                        c'16
+                        e16
                         [
 
-                        c'16
+                        e16
                         ~
 
-                        c'32
+                        e32
 
                         \revert Staff.Stem.stemlet-length
-                        c'16.
+                        e16.
                         ]
 
                         \times 4/5 {
                             % [Voice 2 measure 16]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            c'1
+                            \pitchedTrill
+                            e1
+                            \startTrillSpan f
 
                             \times 4/5 {
 
                                 \override Staff.Stem.stemlet-length = 0.75
-                                c'16
+                                e16
                                 [
+                                \stopTrillSpan
 
-                                c'16
+                                e16
 
-                                c'16
+                                e16
 
-                                c'16
+                                e16
 
                                 \revert Staff.Stem.stemlet-length
-                                c'16
+                                e16
                                 ]
 
                             }
@@ -774,48 +972,55 @@
                         \times 5/8 {
                             % [Voice 2 measure 17]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            c'1.
+                            \pitchedTrill
+                            e1.
+                            \startTrillSpan f
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            c'8
+                            e8
                             [
+                            \stopTrillSpan
 
-                            c'8
+                            e8
 
-                            c'8
+                            e8
 
                             \revert Staff.Stem.stemlet-length
-                            c'8
+                            e8
                             ]
 
                         }
                         % [Voice 2 measure 18]                                 %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                        c'4
+                        e4
 
-                        c'4
+                        e4
 
-                        c'2
+                        \pitchedTrill
+                        e2
+                        \startTrillSpan f
 
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 6/7 {
                             % [Voice 2 measure 19]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             c'4.
+                            \stopTrillSpan
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            c'32
+                            g'32
+                            - \accent
                             [
 
-                            c'32
+                            a'32
 
-                            c'32
+                            ef'32
 
                             \revert Staff.Stem.stemlet-length
-                            c'32
+                            a''32
                             ]
 
-                            c'4.
+                            d''4.
 
                         }
 
@@ -823,41 +1028,43 @@
                             % [Voice 2 measure 20]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            c'32
+                            cs'''32
                             [
 
-                            c'32
+                            g''32
 
-                            c'32
+                            cs''32
+                            - \accent
 
                             \revert Staff.Stem.stemlet-length
-                            c'32
+                            fs'32
                             ]
 
-                            c'4.
+                            a4.
 
-                            c'4.
+                            <cs' f'>4.
 
                         }
 
                         \times 2/3 {
                             % [Voice 2 measure 21]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            c'2
+                            <ef' af'>2
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            c'32
+                            d''32
                             [
 
-                            c'32
+                            cs'''32
 
-                            c'32
+                            a''32
+                            - \accent
 
                             \revert Staff.Stem.stemlet-length
-                            c'32
+                            af''32
                             ]
 
-                            c'2
+                            f''2
 
                         }
 
@@ -865,28 +1072,34 @@
                             % [Voice 2 measure 22]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \override Staff.Stem.stemlet-length = 0.75
-                            c'8
+                            e8
                             [
 
-                            c'8
+                            e8
 
                             \revert Staff.Stem.stemlet-length
-                            c'8
+                            e8
                             ]
 
                         }
 
-                        c'2.
+                        \pitchedTrill
+                        e2.
+                        \startTrillSpan f
 
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 5/6 {
                             % [Voice 2 measure 23]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
-                            c'1
+                            \pitchedTrill
+                            e1
+                            \startTrillSpan f
+                            \stopTrillSpan
 
-                            c'4
+                            e4
+                            \stopTrillSpan
 
-                            c'4
+                            e4
                             \bar "||"
 
                         }
