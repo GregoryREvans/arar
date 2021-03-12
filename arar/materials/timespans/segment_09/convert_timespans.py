@@ -1,7 +1,6 @@
 import abjad
 import evans
 
-from arar.materials.pitch import pitch_handler_one, pitch_handler_two
 from arar.materials.score_structure.segment_09.rhythm_material_pattern import (
     rhythm_material_list,
 )

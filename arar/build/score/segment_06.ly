@@ -144,12 +144,14 @@
 
                             \pitchedTrill
                             a'1
+                            \p
                             \startTrillSpan b'
 
                             \times 4/5 {
 
                                 \override Staff.Stem.stemlet-length = 0.75
                                 gs''16
+                                \ff
                                 [
                                 \stopTrillSpan
 
@@ -170,6 +172,7 @@
 
                         \pitchedTrill
                         c''4
+                        \mp
                         ~
                         \startTrillSpan d''
 
@@ -178,6 +181,7 @@
                         [
 
                         ds'''32
+                        \ff
                         \stopTrillSpan
 
                         f''32
@@ -191,6 +195,7 @@
 
                         \override Staff.Stem.stemlet-length = 0.75
                         a'8.
+                        \mf
                         [
 
                         \revert Staff.Stem.stemlet-length
@@ -226,6 +231,7 @@
 
                         \pitchedTrill
                         d'2.
+                        \f
                         \startTrillSpan gs'
 
                         \tweak text #tuplet-number::calc-fraction-text
@@ -234,10 +240,14 @@
 
                             \pitchedTrill
                             gs'1
+                            \ff
+                            - \tweak stencil #constante-hairpin
+                            \<
                             \startTrillSpan a'
                             \stopTrillSpan
 
                             cs'4
+                            \>
                             \stopTrillSpan
 
                             as'4
@@ -253,6 +263,7 @@
 
                         \override Staff.Stem.stemlet-length = 0.75
                         a'''8.
+                        \p
                         [
 
                         \revert Staff.Stem.stemlet-length
@@ -280,12 +291,14 @@
 
                         \pitchedTrill
                         a'1
+                        \sfp
                         \startTrillSpan b'
 
                         \times 4/5 {
 
                             \override Staff.Stem.stemlet-length = 0.75
                             gs''16
+                            \f
                             [
                             \stopTrillSpan
 
@@ -308,6 +321,9 @@
                             \once \override Dots.staff-position = #1.75
                             f''1.
                             :32
+                            \p
+                            - \tweak stencil #abjad-flared-hairpin
+                            \<
                             \glissando                                         %! abjad.glissando(7)
 
                             \once \override Staff.Tie.transparent = ##t
@@ -322,6 +338,7 @@
                             \undo \hide NoteHead                               %! abjad.glissando(6)
                             f''4
                             :32
+                            \f
 
                         }
 
@@ -333,6 +350,9 @@
                             \once \override Dots.staff-position = #1.75
                             f''2.
                             :32
+                            \p
+                            - \tweak stencil #abjad-flared-hairpin
+                            \<
                             \glissando                                         %! abjad.glissando(7)
 
                             \once \override Staff.Tie.transparent = ##t
@@ -347,6 +367,7 @@
                             \undo \hide NoteHead                               %! abjad.glissando(6)
                             f''4
                             :32
+                            \f
 
                         }
 
@@ -357,6 +378,9 @@
                             \once \override Dots.staff-position = #1.75
                             e''2
                             :32
+                            \p
+                            - \tweak stencil #abjad-flared-hairpin
+                            \<
                             \glissando                                         %! abjad.glissando(7)
 
                             \once \override Staff.Tie.transparent = ##t
@@ -371,6 +395,7 @@
                             \undo \hide NoteHead                               %! abjad.glissando(6)
                             e''8
                             :32
+                            \f
 
                         }
 
@@ -382,6 +407,9 @@
                             \once \override Dots.staff-position = #1.75
                             cs''2.
                             :32
+                            \p
+                            - \tweak stencil #abjad-flared-hairpin
+                            \<
                             \glissando                                         %! abjad.glissando(7)
 
                             \once \override Staff.Tie.transparent = ##t
@@ -396,11 +424,13 @@
                             \undo \hide NoteHead                               %! abjad.glissando(6)
                             cs''4
                             :32
+                            \f
 
                         }
                         % [Voice 1 measure 16]                                 %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                         f''4
+                        \p
 
                         r8
 
@@ -448,6 +478,7 @@
 
                             \override Staff.Stem.stemlet-length = 0.75
                             f'''16
+                            \f
                             - \accent
                             [
 
@@ -501,6 +532,9 @@
                         \once \override Dots.staff-position = #1.75
                         c'''2
                         :32
+                        \p
+                        - \tweak stencil #abjad-flared-hairpin
+                        \<
                         \glissando                                             %! abjad.glissando(7)
 
                         \once \override Staff.Tie.transparent = ##t
@@ -515,6 +549,7 @@
                         \undo \hide NoteHead                                   %! abjad.glissando(6)
                         c'''4
                         :32
+                        \f
 
                         \times 4/7 {
                             % [Voice 1 measure 20]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
@@ -523,6 +558,8 @@
                             \once \override Dots.staff-position = #1.75
                             c'''2.
                             :32
+                            \f
+                            \>
                             \glissando                                         %! abjad.glissando(7)
 
                             \once \override Staff.Tie.transparent = ##t
@@ -537,6 +574,7 @@
                             \undo \hide NoteHead                               %! abjad.glissando(6)
                             c'''8
                             :32
+                            \p
 
                         }
 
@@ -546,6 +584,7 @@
 
                             \pitchedTrill
                             c''2.
+                            \f
                             \startTrillSpan d''
 
                             \override Staff.Stem.stemlet-length = 0.75
@@ -565,6 +604,7 @@
                         % [Voice 1 measure 22]                                 %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                         a'4
+                        \p
 
                         g'4
 
@@ -615,12 +655,14 @@
                             \markup { \hcenter-in #14 "Guitar" }               %! applying staff names and clefs
                             \pitchedTrill
                             f'1
+                            \sfp
                             \startTrillSpan a'
 
                             \times 4/5 {
 
                                 \override Staff.Stem.stemlet-length = 0.75
                                 a'16
+                                \ff
                                 [
                                 \stopTrillSpan
 
@@ -641,10 +683,12 @@
 
                         \pitchedTrill
                         cs'2.
+                        \sfp
                         \startTrillSpan d'
 
                         \override Staff.Stem.stemlet-length = 0.75
                         as'16
+                        \ff
                         [
                         \stopTrillSpan
 
@@ -661,11 +705,13 @@
                             % [Voice 2 measure 3]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             cs''2
+                            \pp
 
                             a'2
 
                             \pitchedTrill
                             fs'1
+                            \sfp
                             \startTrillSpan a'
 
                         }
@@ -675,6 +721,7 @@
 
                             \override Staff.Stem.stemlet-length = 0.75
                             ds'8
+                            \f
                             [
                             \stopTrillSpan
 
@@ -688,6 +735,7 @@
 
                         \pitchedTrill
                         e'2.
+                        \p
                         \startTrillSpan as'
                         % [Voice 2 measure 5]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -698,6 +746,7 @@
 
                         \override Staff.Stem.stemlet-length = 0.75
                         ds'''8
+                        \mp
                         [
                         \stopTrillSpan
 
@@ -719,6 +768,8 @@
                             \once \override Dots.staff-position = #1.75
                             <e c' f' af' b' e''>2.
                             :32
+                            \f
+                            \>
                             \glissando                                         %! abjad.glissando(7)
                             - \abjad-solid-line-with-hook
                             - \tweak bound-details.left.text \markup \concat { \upright
@@ -759,6 +810,7 @@
                             <e c' f' af' b' e''>4.
                             :32
                             :32
+                            \p
 
                             \once \override Staff.Tie.transparent = ##t
                             \once \override Dots.staff-position = #1.75
@@ -779,6 +831,9 @@
                             \once \override Dots.staff-position = #1.75
                             <e d' f' bf' b' e''>1..
                             :32
+                            \f
+                            - \tweak stencil #constante-hairpin
+                            \<
                             \glissando                                         %! abjad.glissando(7)
                             - \abjad-solid-line-with-hook
                             - \tweak bound-details.left.text \markup \concat { \upright
@@ -798,6 +853,7 @@
                         <e d' f' bf' b' e''>2.
                         :32
                         :32
+                        \>
                         \glissando                                             %! abjad.glissando(7)
 
                         \once \override Staff.Tie.transparent = ##t
@@ -817,6 +873,7 @@
                         <e d' f' bf' b' e''>2.
                         :32
                         :32
+                        \p
 
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 5/6 {
@@ -827,6 +884,7 @@
 
                             \override Staff.Stem.stemlet-length = 0.75
                             ef'8
+                            \mf
                             [
 
                             a''8
@@ -838,6 +896,7 @@
                             ]
 
                             d''2
+                            \p
 
                         }
 
@@ -846,6 +905,7 @@
 
                             \override Staff.Stem.stemlet-length = 0.75
                             <e cs' f' g' b' e''>8
+                            \ff
                             - \accent
                             [
 
@@ -858,6 +918,7 @@
                             ]
 
                             <d' fs' e''>2
+                            \p
 
                             <cs' c''>2
 
@@ -871,6 +932,7 @@
 
                             \override Staff.Stem.stemlet-length = 0.75
                             e'16
+                            \mf
                             - \accent
                             [
 
@@ -883,6 +945,7 @@
                             ]
 
                             ds''2
+                            \p
 
                         }
 
@@ -891,6 +954,7 @@
 
                             \override Staff.Stem.stemlet-length = 0.75
                             <e cs' f' g' b' e''>32
+                            \ff
                             [
 
                             <e cs' f' g' b' e''>32
@@ -903,6 +967,7 @@
                             ]
 
                             <fs' e''>4
+                            \p
 
                             <cs' c''>4
 
@@ -936,9 +1001,11 @@
                         ~
 
                         a'32
+                        \sfp
 
                         \revert Staff.Stem.stemlet-length
                         g'16.
+                        \f
                         ]
 
                         \times 4/5 {
@@ -960,6 +1027,7 @@
                                 a'16
 
                                 d'16
+                                \p
 
                                 \revert Staff.Stem.stemlet-length
                                 cs'16
@@ -985,6 +1053,7 @@
                             gs''8
 
                             ds'8
+                            \f
 
                             \revert Staff.Stem.stemlet-length
                             f''8
@@ -996,9 +1065,11 @@
                         cs''4
 
                         a'4
+                        \p
 
                         \pitchedTrill
                         fs'2
+                        \f
                         \startTrillSpan a'
 
                         \tweak text #tuplet-number::calc-fraction-text
@@ -1016,9 +1087,11 @@
                             a'32
 
                             ef'32
+                            \p
 
                             \revert Staff.Stem.stemlet-length
                             a''32
+                            \f
                             ]
 
                             d''4.
@@ -1042,8 +1115,10 @@
                             ]
 
                             a4.
+                            \mf
 
                             <e cs' f' g' b' e''>4.
+                            \f
 
                         }
 
@@ -1057,12 +1132,14 @@
                             [
 
                             cs'''32
+                            \mp
 
                             a''32
                             - \accent
 
                             \revert Staff.Stem.stemlet-length
                             af''32
+                            \p
                             ]
 
                             f''2

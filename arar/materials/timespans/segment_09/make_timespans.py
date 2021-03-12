@@ -2,7 +2,6 @@ from collections import OrderedDict
 
 import abjad
 import tsmakers
-from abjadext import rmakers as rmakers
 
 from arar.materials.score_structure.instruments import instruments
 

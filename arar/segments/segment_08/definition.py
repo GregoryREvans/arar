@@ -4,7 +4,6 @@ import abjad
 import baca
 import evans
 
-from arar.materials.pitch import flute_pitch_handler_one, guitar_pitch_handler_five
 from arar.materials.score_structure.instruments import instruments as insts
 from arar.materials.score_structure.score_structure import score
 from arar.materials.score_structure.segment_08.time_signatures import time_signatures

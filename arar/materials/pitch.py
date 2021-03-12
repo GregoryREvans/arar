@@ -1,5 +1,4 @@
 import evans
-import quicktions
 
 pitch_handler_one = evans.PitchHandler(
     pitch_list=[15],

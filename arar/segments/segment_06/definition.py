@@ -80,6 +80,356 @@ maker = evans.SegmentMaker(
         evans.call("Voice 2", add_trem_name, abjad.select().runs().get([1, 2])),
         evans.attach("Voice 2", abjad.StopTextSpan(), abjad.select().run(2).leaf(3)),
         evans.attach(
+            "Voice 1",
+            abjad.Dynamic("p"),
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("ff"),
+            baca.leaf(1, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("mp"),
+            baca.leaf(6, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("ff"),
+            baca.leaf(8, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("mf"),
+            baca.leaf(12, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("f"),
+            baca.leaf(20, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("ff"),
+            baca.leaf(21, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StartHairpin("--"),
+            baca.leaf(21, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StartHairpin(">"),
+            baca.leaf(22, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("p"),
+            baca.leaf(27, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("sfp"),
+            baca.leaf(33, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("f"),
+            baca.leaf(34, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("p"),
+            baca.leaf(39, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StartHairpin("<|"),
+            baca.leaf(39, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("f"),
+            baca.leaf(40, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("p"),
+            baca.leaf(41, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StartHairpin("<|"),
+            baca.leaf(41, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("f"),
+            baca.leaf(42, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("p"),
+            baca.leaf(43, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StartHairpin("<|"),
+            baca.leaf(43, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("f"),
+            baca.leaf(44, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("p"),
+            baca.leaf(45, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StartHairpin("<|"),
+            baca.leaf(45, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("f"),
+            baca.leaf(46, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("p"),
+            baca.leaf(47, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("f"),
+            baca.leaf(57, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("p"),
+            baca.leaf(71, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StartHairpin("<|"),
+            baca.leaf(71, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("f"),
+            baca.leaf(72, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("f"),
+            baca.leaf(73, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StartHairpin(">"),
+            baca.leaf(73, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("p"),
+            baca.leaf(74, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("f"),
+            baca.leaf(75, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.Dynamic("p"),
+            baca.leaf(80, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("sfp"),
+            baca.leaf(0, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("ff"),
+            baca.leaf(1, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("sfp"),
+            baca.leaf(6, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("ff"),
+            baca.leaf(7, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("pp"),
+            baca.leaf(11, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("sfp"),
+            baca.leaf(13, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("f"),
+            baca.leaf(14, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("p"),
+            baca.leaf(17, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("mp"),
+            baca.leaf(19, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("f"),
+            baca.leaf(21, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.StartHairpin(">"),
+            baca.leaf(21, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("p"),
+            baca.leaf(23, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("f"),
+            baca.leaf(24, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.StartHairpin("--"),
+            baca.leaf(24, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.StartHairpin(">"),
+            baca.leaf(25, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("p"),
+            baca.leaf(26, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("mf"),
+            baca.leaf(28, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("p"),
+            baca.leaf(32, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("ff"),
+            baca.leaf(33, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("p"),
+            baca.leaf(37, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("mf"),
+            baca.leaf(40, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("p"),
+            baca.leaf(44, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("ff"),
+            baca.leaf(45, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("p"),
+            baca.leaf(49, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("sfp"),
+            baca.leaf(58, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("f"),
+            baca.leaf(59, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("p"),
+            baca.leaf(64, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("f"),
+            baca.leaf(69, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("p"),
+            baca.leaf(72, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("f"),
+            baca.leaf(73, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("p"),
+            baca.leaf(77, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("f"),
+            baca.leaf(78, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("mf"),
+            baca.leaf(84, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("f"),
+            baca.leaf(85, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("mp"),
+            baca.leaf(88, pitched=True),
+        ),
+        evans.attach(
+            "Voice 2",
+            abjad.Dynamic("p"),
+            baca.leaf(90, pitched=True),
+        ),
+        evans.attach(
             "Global Context",
             section_title,
             baca.leaf(0),

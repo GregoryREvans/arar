@@ -74,6 +74,7 @@
                         \set Staff.instrumentName =                            %! applying staff names and clefs
                         \markup { \hcenter-in #14 "Bass Flute" }               %! applying staff names and clefs
                         f''8.
+                        \mp
 
                         r16
 
@@ -107,6 +108,9 @@
 
                             \override Staff.Stem.stemlet-length = 0.75
                             cs''8
+                            \f
+                            - \tweak stencil #constante-hairpin
+                            \<
                             [
 
                             c'''8
@@ -141,6 +145,7 @@
 
                             \override Staff.Stem.stemlet-length = 0.75
                             e'8
+                            \>
                             [
 
                             cs''8
@@ -156,6 +161,7 @@
                         }
 
                         f'''32
+                        \p
                         ~
 
                         \override Staff.Stem.stemlet-length = 0.75
@@ -217,6 +223,7 @@
 
                         \override Staff.Stem.stemlet-length = 0.75
                         f'''16
+                        \f
                         [
 
                         f''16
@@ -228,10 +235,12 @@
                         ]
 
                         a'4
+                        \mp
                         % [Voice 1 measure 8]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                         \override Staff.Stem.stemlet-length = 0.75
                         d'16
+                        \f
                         [
 
                         e'16
@@ -243,6 +252,7 @@
                         ]
 
                         cs'''4
+                        \p
 
                         a''4
 
@@ -254,6 +264,7 @@
 
                             \override Staff.Stem.stemlet-length = 0.75
                             f''16
+                            \mf
                             [
 
                             gs''16
@@ -265,6 +276,7 @@
                             ]
 
                             d'2
+                            \p
 
                         }
 
@@ -274,6 +286,7 @@
 
                             \override Staff.Stem.stemlet-length = 0.75
                             e'16
+                            \mp
                             [
 
                             cs''16
@@ -285,6 +298,7 @@
                             ]
 
                             a''2
+                            \p
 
                             f'''2
                             \bar "||"
@@ -312,9 +326,11 @@
                         \set Staff.instrumentName =                            %! applying staff names and clefs
                         \markup { \hcenter-in #14 "Guitar" }                   %! applying staff names and clefs
                         af4
+                        \p
 
                         \override Staff.Stem.stemlet-length = 0.75
                         ef'16
+                        \f
                         [
 
                         a''16
@@ -326,10 +342,12 @@
                         ]
 
                         d''4
+                        \mp
                         % [Voice 2 measure 2]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                         \override Staff.Stem.stemlet-length = 0.75
                         <e cs' f' g' b' e''>16
+                        \ff
                         [
 
                         <e cs' f' g' b' e''>16
@@ -341,6 +359,7 @@
                         ]
 
                         <d' fs' e''>4
+                        \mf
 
                         <cs' c''>4
 
@@ -352,6 +371,7 @@
 
                             \override Staff.Stem.stemlet-length = 0.75
                             e'16
+                            \f
                             [
 
                             as''16
@@ -363,6 +383,7 @@
                             ]
 
                             ds''2
+                            \mp
 
                         }
 
@@ -372,6 +393,7 @@
 
                             \override Staff.Stem.stemlet-length = 0.75
                             <e cs' f' g' b' e''>16
+                            \ff
                             [
 
                             <e cs' f' g' b' e''>16
@@ -383,6 +405,7 @@
                             ]
 
                             <fs' e''>2
+                            \p
 
                             <cs' c''>2
 
@@ -396,6 +419,7 @@
 
                             \override Staff.Stem.stemlet-length = 0.75
                             g'32
+                            \mp
                             [
 
                             a'32
@@ -407,6 +431,7 @@
                             ]
 
                             d''4.
+                            \p
 
                         }
 
@@ -416,6 +441,7 @@
 
                             \override Staff.Stem.stemlet-length = 0.75
                             cs'''32
+                            \mf
                             [
 
                             g''32
@@ -427,8 +453,10 @@
                             ]
 
                             a4.
+                            \p
 
                             <e cs' f' g' b' e''>4.
+                            \f
 
                         }
 
@@ -436,9 +464,11 @@
                             % [Voice 2 measure 7]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             <ef' af'>2
+                            \p
 
                             \override Staff.Stem.stemlet-length = 0.75
                             d''32
+                            \f
                             [
 
                             cs'''32
@@ -450,6 +480,7 @@
                             ]
 
                             f''2
+                            \mp
 
                         }
 
@@ -458,6 +489,7 @@
 
                             \override Staff.Stem.stemlet-length = 0.75
                             d''32
+                            \f
                             [
 
                             f'32
@@ -466,6 +498,7 @@
 
                             \revert Staff.Stem.stemlet-length
                             fs'32
+                            \p
                             ]
 
                             e''2
