@@ -493,6 +493,11 @@
                             \f
                             \>
                             \glissando                                         %! abjad.glissando(7)
+                            - \abjad-solid-line-with-hook
+                            - \tweak bound-details.left.text \markup \concat { \upright
+                                tamb. \hspace #0.5 }
+                            - \tweak staff-padding 4.5
+                            \startTextSpan
 
                         }
 
@@ -522,6 +527,7 @@
                             \once \override Staff.Tie.transparent = ##t
                             \once \override Dots.staff-position = #1.75
                             r4.
+                            \stopTextSpan
 
                         }
 
@@ -540,6 +546,11 @@
                             \f
                             \>
                             \glissando                                         %! abjad.glissando(7)
+                            - \abjad-solid-line-with-hook
+                            - \tweak bound-details.left.text \markup \concat { \upright
+                                ras. \hspace #0.5 }
+                            - \tweak staff-padding 4.5
+                            \startTextSpan
 
                         }
 
@@ -579,6 +590,7 @@
                             \once \override Staff.Tie.transparent = ##t
                             \once \override Dots.staff-position = #1.75
                             r4.
+                            \stopTextSpan
 
                         }
 
@@ -596,6 +608,11 @@
                             \pp
                             \<
                             \glissando                                         %! abjad.glissando(7)
+                            - \abjad-solid-line-with-hook
+                            - \tweak bound-details.left.text \markup \concat { \upright
+                                ras. \hspace #0.5 }
+                            - \tweak staff-padding 4.5
+                            \startTextSpan
 
                         }
 
@@ -625,6 +642,7 @@
                             \once \override Staff.Tie.transparent = ##t
                             \once \override Dots.staff-position = #1.75
                             r8.
+                            \stopTextSpan
                             \bar "||"
 
                         }

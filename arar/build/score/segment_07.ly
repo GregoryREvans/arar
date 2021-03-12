@@ -73,7 +73,6 @@
                     {
 
                         \tweak text #tuplet-number::calc-fraction-text
-                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 5) "4")
                         \times 5/7 {
                             % [Voice 1 measure 1]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -108,7 +107,6 @@
                         }
 
                         \tweak text #tuplet-number::calc-fraction-text
-                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 32 19) "16")
                         \times 19/32 {
                             % [Voice 1 measure 2]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -138,7 +136,6 @@
                         }
 
                         \tweak text #tuplet-number::calc-fraction-text
-                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 10 9) "8")
                         \times 9/10 {
                             % [Voice 1 measure 3]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -168,7 +165,6 @@
                         }
 
                         \tweak text #tuplet-number::calc-fraction-text
-                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 32 17) "16")
                         \times 17/32 {
                             % [Voice 1 measure 4]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -197,7 +193,6 @@
 
                         }
 
-                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) "2")
                         \times 2/3 {
                             % [Voice 1 measure 5]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -227,7 +222,6 @@
                         }
 
                         \tweak text #tuplet-number::calc-fraction-text
-                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 28 15) "16")
                         \times 15/28 {
                             % [Voice 1 measure 6]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -281,7 +275,6 @@
                         \>
 
                         \tweak text #tuplet-number::calc-fraction-text
-                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 16 13) "16")
                         \times 13/16 {
                             % [Voice 1 measure 8]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -311,13 +304,12 @@
                         }
 
                         \tweak text #tuplet-number::calc-fraction-text
-                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 6) "8")
-                        \times 6/5 {
+                        \times 3/5 {
                             % [Voice 1 measure 9]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \once \override Staff.Tie.transparent = ##t
                             \once \override Dots.staff-position = #1.75
-                            cs''2
+                            cs''1
                             :32
                             \mp
                             \<
@@ -333,7 +325,7 @@
                             \revert NoteColumn.glissando-skip                  %! abjad.glissando(6)
                             \revert NoteHead.no-ledgers                        %! abjad.glissando(6)
                             \undo \hide NoteHead                               %! abjad.glissando(6)
-                            cs''8
+                            cs''4
                             :32
                             \mf
                             \>
@@ -341,7 +333,6 @@
                         }
 
                         \tweak text #tuplet-number::calc-fraction-text
-                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 16 11) "16")
                         \times 11/16 {
                             % [Voice 1 measure 10]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -371,7 +362,6 @@
                         }
 
                         \tweak text #tuplet-number::calc-fraction-text
-                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 5) "8")
                         \times 5/6 {
                             % [Voice 1 measure 11]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -431,9 +421,13 @@
                         \pp
                         \<
                         \glissando                                             %! abjad.glissando(7)
+                        - \abjad-solid-line-with-hook
+                        - \tweak bound-details.left.text \markup \concat { \upright
+                            ras. \hspace #0.5 }
+                        - \tweak staff-padding 4.5
+                        \startTextSpan
 
                         \tweak text #tuplet-number::calc-fraction-text
-                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 28 19) "16")
                         \times 19/28 {
                             % [Voice 2 measure 2]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -461,25 +455,30 @@
                             \once \override Staff.Tie.transparent = ##t
                             \once \override Dots.staff-position = #1.75
                             r4.
+                            \stopTextSpan
 
                         }
 
                         \tweak text #tuplet-number::calc-fraction-text
-                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 17 18) "16")
-                        \times 18/17 {
+                        \times 9/17 {
                             % [Voice 2 measure 3]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \once \override Staff.Tie.transparent = ##t
                             \once \override Dots.staff-position = #1.75
-                            r8.
+                            r4.
 
                             \once \override Staff.Tie.transparent = ##t
                             \once \override Dots.staff-position = #1.75
-                            <e d' f' bf' b' e''>2..
+                            <e d' f' bf' b' e''>1..
                             :32
                             \pp
                             \<
                             \glissando                                         %! abjad.glissando(7)
+                            - \abjad-solid-line-with-hook
+                            - \tweak bound-details.left.text \markup \concat { \upright
+                                ras. \hspace #0.5 }
+                            - \tweak staff-padding 4.5
+                            \startTextSpan
 
                         }
 
@@ -506,9 +505,7 @@
 
                         }
 
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 15 16) "16")
-                        \times 16/15 {
+                        \times 8/15 {
                             % [Voice 2 measure 5]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             \once \override Staff.Tie.transparent = ##t
@@ -517,18 +514,18 @@
                             \revert NoteColumn.glissando-skip                  %! abjad.glissando(6)
                             \revert NoteHead.no-ledgers                        %! abjad.glissando(6)
                             \undo \hide NoteHead                               %! abjad.glissando(6)
-                            <e d' f' bf' b' e''>2.
+                            <e d' f' bf' b' e''>1.
                             :32
                             \mf
 
                             \once \override Staff.Tie.transparent = ##t
                             \once \override Dots.staff-position = #1.75
-                            r8.
+                            r4.
+                            \stopTextSpan
 
                         }
 
                         \tweak text #tuplet-number::calc-fraction-text
-                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 19 15) "16")
                         \times 15/19 {
                             % [Voice 2 measure 6]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -543,11 +540,15 @@
                             \pp
                             \<
                             \glissando                                         %! abjad.glissando(7)
+                            - \abjad-solid-line-with-hook
+                            - \tweak bound-details.left.text \markup \concat { \upright
+                                tamb. \hspace #0.5 }
+                            - \tweak staff-padding 4.5
+                            \startTextSpan
 
                         }
 
                         \tweak text #tuplet-number::calc-fraction-text
-                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 9 7) "8")
                         \times 7/9 {
                             % [Voice 2 measure 7]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -575,11 +576,11 @@
                             \once \override Staff.Tie.transparent = ##t
                             \once \override Dots.staff-position = #1.75
                             r8.
+                            \stopTextSpan
 
                         }
 
                         \tweak text #tuplet-number::calc-fraction-text
-                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 17 13) "16")
                         \times 13/17 {
                             % [Voice 2 measure 8]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -594,6 +595,11 @@
                             \pp
                             \<
                             \glissando                                         %! abjad.glissando(7)
+                            - \abjad-solid-line-with-hook
+                            - \tweak bound-details.left.text \markup \concat { \upright
+                                tamb. \hspace #0.5 }
+                            - \tweak staff-padding 4.5
+                            \startTextSpan
 
                             \once \override Staff.Tie.transparent = ##t
                             \once \override Dots.staff-position = #1.75
@@ -609,7 +615,6 @@
                         }
 
                         \tweak text #tuplet-number::calc-fraction-text
-                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 3) "4")
                         \times 3/4 {
                             % [Voice 2 measure 9]                              %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -641,11 +646,11 @@
                             \once \override Staff.Tie.transparent = ##t
                             \once \override Dots.staff-position = #1.75
                             r8.
+                            \stopTextSpan
 
                         }
 
                         \tweak text #tuplet-number::calc-fraction-text
-                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 12 11) "16")
                         \times 11/12 {
                             % [Voice 2 measure 10]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -660,6 +665,11 @@
                             \pp
                             \<
                             \glissando                                         %! abjad.glissando(7)
+                            - \abjad-solid-line-with-hook
+                            - \tweak bound-details.left.text \markup \concat { \upright
+                                norm. \hspace #0.5 }
+                            - \tweak staff-padding 4.5
+                            \startTextSpan
 
                             \once \override Staff.Tie.transparent = ##t
                             \once \override Dots.staff-position = #1.75
@@ -678,11 +688,11 @@
                             \once \override Staff.Tie.transparent = ##t
                             \once \override Dots.staff-position = #1.75
                             r8.
+                            \stopTextSpan
 
                         }
 
                         \tweak text #tuplet-number::calc-fraction-text
-                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 17 10) "16")
                         \times 10/17 {
                             % [Voice 2 measure 11]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -695,6 +705,11 @@
                             <e c' f' af' b' e''>2..
                             :32
                             \mp
+                            - \abjad-solid-line-with-hook
+                            - \tweak bound-details.left.text \markup \concat { \upright
+                                norm. \hspace #0.5 }
+                            - \tweak staff-padding 4.5
+                            \startTextSpan
                             \bar "||"
 
                         }

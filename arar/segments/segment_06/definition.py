@@ -7,10 +7,31 @@ import evans
 from arar.materials.score_structure.instruments import instruments as insts
 from arar.materials.score_structure.score_structure import score
 from arar.materials.score_structure.segment_06.time_signatures import time_signatures
-from arar.materials.timespans.segment_06.convert_timespans import (  # handler_commands,
+from arar.materials.timespans.segment_06.convert_timespans import (
     handler_commands,
     rhythm_commands,
 )
+
+tremolo_types = evans.CyclicList(
+    ["bis."],
+    forget=False,
+)
+
+
+def add_trem_name(selections):
+    for run in abjad.select(selections).runs():
+        leaf_1 = abjad.select(run).leaf(0)
+        following_rest = abjad.get.leaf(run[-1], 1)
+        type = tremolo_types(r=1)[0]
+        start = abjad.StartTextSpan(
+            left_text=abjad.Markup(fr"\upright {type}"),
+            style="solid-line-with-hook",
+        )
+        abjad.tweak(start).staff_padding = 4.5
+        stop = abjad.StopTextSpan()
+        abjad.attach(start, leaf_1)
+        abjad.attach(stop, following_rest)
+
 
 met_80 = abjad.MetronomeMark.make_tempo_equation_markup((1, 4), 80)
 mark_80 = abjad.LilyPondLiteral(
@@ -44,11 +65,6 @@ maker = evans.SegmentMaker(
     name_staves=True,
     commands=[
         rhythm_commands,
-        # evans.call(
-        #     "score",
-        #     evans.SegmentMaker.transform_brackets,
-        #     abjad.select().components(abjad.Score),
-        # ),
         evans.call(
             "score",
             evans.SegmentMaker.rewrite_meter,
@@ -56,37 +72,13 @@ maker = evans.SegmentMaker(
         ),
         "skips",
         handler_commands,
-        # evans.call(
-        #     "vertical",
-        #     global_pitch_handler,
-        #     evans.return_vertical_moment_ties,
-        # ),
-        # evans.call(
-        #     "Voice 2",
-        #     evans.IntermittentVoiceHandler(
-        #         evans.RhythmHandler(
-        #             rmakers.stack(
-        #                 evans.RTMMaker(
-        #                     [
-        #                         "(1 (1 1 1))",
-        #                     ]
-        #                 ),
-        #                 rmakers.trivialize(abjad.select().tuplets()),
-        #                 rmakers.extract_trivial(abjad.select().tuplets()),
-        #                 rmakers.rewrite_rest_filled(abjad.select().tuplets()),
-        #                 rmakers.rewrite_sustained(abjad.select().tuplets()),
-        #             ),
-        #             forget=False,
-        #         ),
-        #         direction=abjad.Down,
-        #     ),
-        #     abjad.select().leaves().get([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]),
-        # ),
         evans.call(
             "score",
             evans.SegmentMaker.beam_score,
             abjad.select().components(abjad.Score),
         ),
+        evans.call("Voice 2", add_trem_name, abjad.select().runs().get([1, 2])),
+        evans.attach("Voice 2", abjad.StopTextSpan(), abjad.select().run(2).leaf(3)),
         evans.attach(
             "Global Context",
             section_title,
@@ -100,7 +92,6 @@ maker = evans.SegmentMaker(
     ],
     score_template=score,
     time_signatures=time_signatures,
-    # clef_handlers=clef_handlers,
     tuplet_bracket_noteheads=False,
     add_final_grand_pause=False,
     score_includes=[
@@ -111,7 +102,7 @@ maker = evans.SegmentMaker(
     current_directory=pathlib.Path(__file__).resolve().parent,
     cutaway=False,
     beam_pattern="meter",
-    beam_rests=True,
+    beam_rests=False,
     mm_rests=False,
     barline="||",
     tempo=((1, 4), 80),

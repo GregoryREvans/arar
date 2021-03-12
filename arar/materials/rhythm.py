@@ -373,3 +373,118 @@ guitar_rhythm_handler_six = evans.RhythmHandler(
     forget=False,
     name="guitar_rhythm_handler_six",
 )
+
+###
+###
+
+flute_rmaker_seven = rmakers.stack(
+    evans.RTMMaker(
+        [
+            "(1 ((1 (-1 2)) (1 (-1 2)) (1 (-1 2)) (1 (-1 2))))",
+            "(1 (-1 2 -1 2 -1 2 -1))",
+            "(1 (-1 2 -1 2 -1 1))",
+            "(1 ((1 (-1 2)) (1 (-1 2))))",
+            "(1 ((1 (-1 2)) (1 (-1 2)) (1 (-1 2)) (1 (-1 2))))",
+            "(1 ((1 (-1 2)) (1 (-1 2)) (1 (-1 2)) (1 (-1 2))))",
+            "(1 (-1 2 -1 2 -1 2 -1))",
+            "(1 (-1 2 -1 2 -1 1))",
+            "(1 ((1 (-1 2)) (1 (-1 2)) (1 (-1 2)) (1 (-1 2))))",
+            "(1 (-1 2 -1 2 -1 2 -1))",
+            "(1 (-1 2 -1 2 -1 1))",
+            "(1 ((1 (-1 2)) (1 (-1 2))))",
+            "(1 (-1 2 -1 2 -1 1))",
+            "(1 (-1 2 -1 2 -1 2 -1))",
+        ]
+    ),
+    rmakers.trivialize(abjad.select().tuplets()),
+    rmakers.extract_trivial(abjad.select().tuplets()),
+    rmakers.rewrite_rest_filled(abjad.select().tuplets()),
+    rmakers.rewrite_sustained(abjad.select().tuplets()),
+)
+
+flute_rhythm_handler_seven = evans.RhythmHandler(
+    rmaker=flute_rmaker_seven,
+    forget=False,
+    name="flute_rhythm_handler_seven",
+)
+
+guitar_rmaker_seven = rmakers.stack(
+    evans.RTMMaker(
+        [
+            "(4 (1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1))",
+            "(5/2 (1 1 1 1 1 1 1 1 1 1))",
+            "(9/2 (1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1))",
+        ]
+    ),
+    rmakers.trivialize(abjad.select().tuplets()),
+    rmakers.extract_trivial(abjad.select().tuplets()),
+    rmakers.rewrite_rest_filled(abjad.select().tuplets()),
+    rmakers.rewrite_sustained(abjad.select().tuplets()),
+)
+
+guitar_rhythm_handler_seven = evans.RhythmHandler(
+    rmaker=guitar_rmaker_seven,
+    forget=False,
+    name="guitar_rhythm_handler_seven",
+)
+
+###
+###
+
+flute_rmaker_eight = rmakers.stack(
+    evans.RTMMaker(
+        [
+            "(1 ((1 (1 1 1)) (1 (1 1 1 2)) (1 (3 1))))",
+            "(1 ((1 (1 1 1)) (1 (1 1 2 1)) (2 (1 1))))",
+            "(1 ((1 (1 1 1)) (1 (1 2 1 3)) (1 (1 1))))",
+            "(1 ((1 (1 1 1)) (1 (2 1 3 1)) (1 (1 1))))",
+            "(1 ((1 (1 1 1)) (2 (1 3 1 1)) (1 (1 1))))",
+            "(1 ((1 (1 1 2)) (1 (3 1 1 1)) (1 (1 1))))",
+            "(1 ((1 (1 2 1)) (3 (1 1 1 1)) (1 (1 1))))",
+            "(1 ((1 (2 1 3)) (1 (1 1 1 1)) (1 (1 1))))",
+            "(1 ((2 (1 3 1)) (1 (1 1 1 1)) (1 (1 1))))",
+            "(1 ((1 (3 1 1)) (1 (1 1 1 1)) (1 (1 2))))",
+            "(1 ((3 (1 1 1)) (1 (1 1 1 1)) (1 (2 1))))",
+            "(1 ((1 (1 1 1)) (1 (1 1 1 1)) (2 (1 3))))",
+        ]
+    ),
+    rmakers.trivialize(abjad.select().tuplets()),
+    rmakers.extract_trivial(abjad.select().tuplets()),
+    rmakers.rewrite_rest_filled(abjad.select().tuplets()),
+    rmakers.rewrite_sustained(abjad.select().tuplets()),
+)
+
+flute_rhythm_handler_eight = evans.RhythmHandler(
+    rmaker=flute_rmaker_eight,
+    forget=False,
+    name="flute_rhythm_handler_eight",
+)
+
+guitar_rmaker_eight = rmakers.stack(
+    evans.RTMMaker(
+        [
+            "(1 ((1 (1 1 1 1 1)) (1 (2 1)) (1 (1 2))))",
+            "(1 ((1 (1 1 1 1 1)) (2 (1 1)) (1 (2 1))))",
+            "(1 ((1 (1 1 1 1 2)) (1 (1 1)) (2 (1 1))))",
+            "(1 ((1 (1 1 1 2 1)) (1 (1 2)) (1 (1 1))))",
+            "(1 ((1 (1 1 2 1 1)) (1 (2 1)) (1 (1 1))))",
+            "(1 ((1 (1 2 1 1 1)) (2 (1 1)) (1 (1 1))))",
+            "(1 ((1 (2 1 1 1 2)) (1 (1 1)) (1 (1 1))))",
+            "(1 ((2 (1 1 1 2 1)) (1 (1 1)) (1 (1 1))))",
+            "(1 ((1 (1 1 2 1 1)) (1 (1 1)) (1 (1 2))))",
+            "(1 ((1 (1 2 1 1 1)) (1 (1 1)) (1 (2 1))))",
+            "(1 ((1 (2 1 1 1 1)) (1 (1 1)) (2 (1 1))))",
+            "(1 ((2 (1 1 1 1 1)) (1 (1 2)) (1 (1 1))))",
+        ]
+    ),
+    rmakers.trivialize(abjad.select().tuplets()),
+    rmakers.extract_trivial(abjad.select().tuplets()),
+    rmakers.rewrite_rest_filled(abjad.select().tuplets()),
+    rmakers.rewrite_sustained(abjad.select().tuplets()),
+)
+
+guitar_rhythm_handler_eight = evans.RhythmHandler(
+    rmaker=guitar_rmaker_eight,
+    forget=False,
+    name="guitar_rhythm_handler_eight",
+)
