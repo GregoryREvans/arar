@@ -112,6 +112,7 @@
                             - \tweak stencil #constante-hairpin
                             \<
                             [
+                            (
 
                             c'''8
 
@@ -119,6 +120,7 @@
 
                             \revert Staff.Stem.stemlet-length
                             a''8
+                            )
                             ]
 
                         }
@@ -127,6 +129,7 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         f'''32
                         [
+                        (
 
                         f''32
 
@@ -138,6 +141,7 @@
 
                         \revert Staff.Stem.stemlet-length
                         d'32
+                        )
                         ]
 
                         \tweak text #tuplet-number::calc-fraction-text
@@ -147,6 +151,7 @@
                             e'8
                             \>
                             [
+                            (
 
                             cs''8
 
@@ -156,6 +161,7 @@
 
                             \revert Staff.Stem.stemlet-length
                             a''8
+                            )
                             ]
 
                         }
@@ -225,6 +231,7 @@
                         f'''16
                         \f
                         [
+                        (
 
                         f''16
 
@@ -236,12 +243,14 @@
 
                         a'4
                         \mp
+                        )
                         % [Voice 1 measure 8]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                         \override Staff.Stem.stemlet-length = 0.75
                         d'16
                         \f
                         [
+                        (
 
                         e'16
 
@@ -253,6 +262,7 @@
 
                         cs'''4
                         \p
+                        )
 
                         a''4
 
@@ -266,6 +276,7 @@
                             f''16
                             \mf
                             [
+                            (
 
                             gs''16
 
@@ -277,6 +288,7 @@
 
                             d'2
                             \p
+                            )
 
                         }
 
@@ -288,6 +300,7 @@
                             e'16
                             \mp
                             [
+                            (
 
                             cs''16
 
@@ -299,6 +312,7 @@
 
                             a''2
                             \p
+                            )
 
                             f'''2
                             \bar "||"

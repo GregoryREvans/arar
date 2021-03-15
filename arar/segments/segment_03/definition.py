@@ -230,6 +230,76 @@ maker = evans.SegmentMaker(
             baca.leaf(45, pitched=True),
         ),
         evans.attach(
+            "Voice 1",
+            abjad.StartSlur(),
+            baca.leaf(6, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StopSlur(),
+            baca.leaf(9, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StartSlur(),
+            baca.leaf(10, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StopSlur(),
+            baca.leaf(15, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StartSlur(),
+            baca.leaf(16, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StopSlur(),
+            baca.leaf(20, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StartSlur(),
+            baca.leaf(36, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StopSlur(),
+            baca.leaf(40, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StartSlur(),
+            baca.leaf(41, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StopSlur(),
+            baca.leaf(45, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StartSlur(),
+            baca.leaf(48, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StopSlur(),
+            baca.leaf(52, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StartSlur(),
+            baca.leaf(53, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StopSlur(),
+            baca.leaf(57, pitched=True),
+        ),
+        evans.attach(
             "Global Context",
             section_title,
             baca.leaf(0),

@@ -153,6 +153,7 @@
                                 gs''16
                                 \ff
                                 [
+                                (
                                 \stopTrillSpan
 
                                 g''16
@@ -163,6 +164,7 @@
 
                                 \revert Staff.Stem.stemlet-length
                                 a'16
+                                )
                                 ]
 
                             }
@@ -182,6 +184,7 @@
 
                         ds'''32
                         \ff
+                        (
                         \stopTrillSpan
 
                         f''32
@@ -196,6 +199,7 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         a'8.
                         \mf
+                        )
                         [
 
                         \revert Staff.Stem.stemlet-length
@@ -220,11 +224,13 @@
                             \override Staff.Stem.stemlet-length = 0.75
                             gs'8
                             [
+                            (
 
                             d'8
 
                             \revert Staff.Stem.stemlet-length
                             as'8
+                            )
                             ]
 
                         }
@@ -248,6 +254,7 @@
 
                             cs'4
                             \>
+                            (
                             \stopTrillSpan
 
                             as'4
@@ -260,11 +267,13 @@
                         f'''4
 
                         ds'''4
+                        )
 
                         \override Staff.Stem.stemlet-length = 0.75
                         a'''8.
                         \p
                         [
+                        (
 
                         \revert Staff.Stem.stemlet-length
                         gs''16
@@ -286,6 +295,7 @@
 
                         \revert Staff.Stem.stemlet-length
                         fs'8.
+                        )
                         ]
                         % [Voice 1 measure 11]                                 %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
@@ -300,6 +310,7 @@
                             gs''16
                             \f
                             [
+                            (
                             \stopTrillSpan
 
                             g''16
@@ -310,6 +321,7 @@
 
                             \revert Staff.Stem.stemlet-length
                             a'16
+                            )
                             ]
 
                         }
@@ -450,10 +462,12 @@
 
                                 a'4
                                 - \accent
+                                (
 
                                 d'4
 
                                 e'4
+                                )
 
                             }
 
@@ -462,6 +476,7 @@
                             \override Staff.Stem.stemlet-length = 0.75
                             cs''8.
                             [
+                            (
 
                             c'''8.
 
@@ -469,6 +484,7 @@
 
                             \revert Staff.Stem.stemlet-length
                             a''8.
+                            )
                             ]
 
                         }
@@ -481,6 +497,7 @@
                             \f
                             - \accent
                             [
+                            (
 
                             f''16
 
@@ -492,6 +509,7 @@
 
                             \revert Staff.Stem.stemlet-length
                             d'16
+                            )
                             ]
 
                         }
@@ -502,6 +520,7 @@
                             \override Staff.Stem.stemlet-length = 0.75
                             e'8
                             [
+                            (
 
                             cs''8
                             - \accent
@@ -512,6 +531,7 @@
 
                             \revert Staff.Stem.stemlet-length
                             a''8
+                            )
                             ]
 
                         }
@@ -590,6 +610,7 @@
                             \override Staff.Stem.stemlet-length = 0.75
                             ds'''16
                             [
+                            (
                             \stopTrillSpan
 
                             f''16
@@ -598,6 +619,7 @@
 
                             \revert Staff.Stem.stemlet-length
                             cs''16
+                            )
                             ]
 
                         }
@@ -605,20 +627,24 @@
 
                         a'4
                         \p
+                        (
 
                         g'4
 
                         f''2
+                        )
 
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 10/24 {
                             % [Voice 1 measure 23]                             %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                             gs'4
+                            (
 
                             d'4
 
                             as'4
+                            )
 
                         }
 

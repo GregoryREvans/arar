@@ -327,6 +327,46 @@ maker = evans.SegmentMaker(
             baca.leaf(55, pitched=True),
         ),
         evans.attach(
+            "Voice 1",
+            abjad.StartSlur(),
+            baca.leaf(22, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StopSlur(),
+            baca.leaf(25, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StartSlur(),
+            baca.leaf(26, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StopSlur(),
+            baca.leaf(31, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StartSlur(),
+            baca.leaf(32, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StopSlur(),
+            baca.leaf(36, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StartSlur(),
+            baca.leaf(37, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StopSlur(),
+            baca.leaf(41, pitched=True),
+        ),
+        evans.attach(
             "Global Context",
             section_title,
             baca.leaf(0),

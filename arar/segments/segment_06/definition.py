@@ -430,6 +430,136 @@ maker = evans.SegmentMaker(
             baca.leaf(92, pitched=True),
         ),
         evans.attach(
+            "Voice 1",
+            abjad.StartSlur(),
+            baca.leaf(1, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StopSlur(),
+            baca.leaf(5, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StartSlur(),
+            baca.leaf(8, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StopSlur(),
+            baca.leaf(12, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StartSlur(),
+            baca.leaf(17, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StopSlur(),
+            baca.leaf(19, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StartSlur(),
+            baca.leaf(22, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StopSlur(),
+            baca.leaf(26, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StartSlur(),
+            baca.leaf(27, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StopSlur(),
+            baca.leaf(32, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StartSlur(),
+            baca.leaf(34, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StopSlur(),
+            baca.leaf(38, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StartSlur(),
+            baca.leaf(50, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StopSlur(),
+            baca.leaf(52, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StartSlur(),
+            baca.leaf(53, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StopSlur(),
+            baca.leaf(56, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StartSlur(),
+            baca.leaf(57, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StopSlur(),
+            baca.leaf(62, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StartSlur(),
+            baca.leaf(63, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StopSlur(),
+            baca.leaf(67, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StartSlur(),
+            baca.leaf(76, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StopSlur(),
+            baca.leaf(79, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StartSlur(),
+            baca.leaf(80, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StopSlur(),
+            baca.leaf(82, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StartSlur(),
+            baca.leaf(83, pitched=True),
+        ),
+        evans.attach(
+            "Voice 1",
+            abjad.StopSlur(),
+            baca.leaf(85, pitched=True),
+        ),
+        evans.attach(
             "Global Context",
             section_title,
             baca.leaf(0),

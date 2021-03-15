@@ -83,6 +83,7 @@
                             c''8
                             \ff
                             [
+                            (
 
                             cs''8
 
@@ -104,6 +105,7 @@
 
                             \revert Staff.Stem.stemlet-length
                             f''8
+                            )
                             ]
 
                         }
@@ -111,6 +113,7 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         e''8.
                         [
+                        (
 
                         \revert Staff.Stem.stemlet-length
                         cs''16
@@ -125,6 +128,7 @@
 
                         \revert Staff.Stem.stemlet-length
                         bf'16
+                        )
                         ]
 
                         \tweak text #tuplet-number::calc-fraction-text
@@ -133,6 +137,7 @@
                             \override Staff.Stem.stemlet-length = 0.75
                             a'''16
                             [
+                            (
 
                             gqs'''16
 
@@ -140,6 +145,7 @@
 
                             \revert Staff.Stem.stemlet-length
                             fs'''16
+                            )
                             ]
 
                         }
@@ -161,6 +167,7 @@
                             \override Staff.Stem.stemlet-length = 0.75
                             e''8
                             [
+                            (
 
                             f''8
 
@@ -182,6 +189,7 @@
 
                             \revert Staff.Stem.stemlet-length
                             a''8.
+                            )
                             ]
 
                         }
@@ -189,6 +197,7 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         af''8
                         [
+                        (
 
                         \revert Staff.Stem.stemlet-length
                         f''8
@@ -205,6 +214,7 @@
 
                             \revert Staff.Stem.stemlet-length
                             d''8
+                            )
                             ]
 
                         }
@@ -214,6 +224,7 @@
                             \override Staff.Stem.stemlet-length = 0.75
                             cs''''8
                             [
+                            (
 
                             bqs'''16
 
@@ -221,6 +232,7 @@
 
                             \revert Staff.Stem.stemlet-length
                             bf'''16
+                            )
                             ]
 
                         }
@@ -228,15 +240,18 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         cs'''8
                         [
+                        (
 
                         \revert Staff.Stem.stemlet-length
                         dqs'''8
+                        )
                         ]
                         % [Voice 1 measure 5]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
                         \override Staff.Stem.stemlet-length = 0.75
                         c''16
                         [
+                        (
 
                         cs''16
 
@@ -244,11 +259,13 @@
 
                         \revert Staff.Stem.stemlet-length
                         d''16
+                        )
                         ]
 
                         \override Staff.Stem.stemlet-length = 0.75
                         af''8.
                         [
+                        (
 
                         \revert Staff.Stem.stemlet-length
                         g''16
@@ -276,6 +293,7 @@
 
                         \revert Staff.Stem.stemlet-length
                         bf'8
+                        )
                         ]
 
                         \times 2/3 {
@@ -283,6 +301,7 @@
                             \override Staff.Stem.stemlet-length = 0.75
                             a'''8.
                             [
+                            (
 
                             gqs'''16
 
@@ -290,6 +309,7 @@
 
                             \revert Staff.Stem.stemlet-length
                             fs'''16
+                            )
                             ]
 
                         }
@@ -297,9 +317,11 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         a''8
                         [
+                        (
 
                         \revert Staff.Stem.stemlet-length
                         bqf''8
+                        )
                         ]
 
                         \tweak text #tuplet-number::calc-fraction-text
@@ -309,6 +331,7 @@
                             \override Staff.Stem.stemlet-length = 0.75
                             e''16
                             [
+                            (
 
                             f''8
 
@@ -341,6 +364,7 @@
 
                             \revert Staff.Stem.stemlet-length
                             d''8.
+                            )
                             ]
 
                         }
@@ -348,6 +372,7 @@
                         \override Staff.Stem.stemlet-length = 0.75
                         cs''''16
                         [
+                        (
 
                         bqs'''16
 
@@ -363,6 +388,7 @@
 
                         \revert Staff.Stem.stemlet-length
                         dqs'''8
+                        )
                         ]
                         % [Voice 1 measure 9]                                  %! COMMENT_MEASURE_NUMBERS:abjad.SegmentMaker.comment_measure_numbers()
 
