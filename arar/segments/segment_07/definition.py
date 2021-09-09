@@ -123,7 +123,7 @@ maker = evans.SegmentMaker(
         evans.attach(
             "Voice 1",
             abjad.StopTrillSpan(),
-            baca.leaf(0),
+            baca.selectors.leaf(0),
         ),
         evans.call(
             "Voice 1",
@@ -218,7 +218,7 @@ maker = evans.SegmentMaker(
         evans.attach(
             "Voice 2",
             abjad.Dynamic("mp"),
-            baca.leaf(-1, pitched=True),
+            baca.selectors.leaf(-1, pitched=True),
         ),
         evans.call(
             "Voice 2",
@@ -233,12 +233,12 @@ maker = evans.SegmentMaker(
         evans.attach(
             "Global Context",
             section_title,
-            baca.leaf(0),
+            baca.selectors.leaf(0),
         ),
         evans.attach(
             "Global Context",
             mark_135,
-            baca.leaf(0),
+            baca.selectors.leaf(0),
         ),
     ],
     score_template=score,

@@ -78,112 +78,112 @@ maker = evans.SegmentMaker(
         evans.attach(
             "Voice 2",
             abjad.StopTextSpan(),
-            baca.leaf(0),
+            baca.selectors.leaf(0),
         ),
         evans.attach(
             "Voice 1",
             abjad.StartBeam(),
-            baca.leaf(20, pitched=True),
+            baca.selectors.leaf(20, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.StopBeam(),
-            baca.leaf(21, pitched=True),
+            baca.selectors.leaf(21, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.StartBeam(),
-            baca.leaf(22, pitched=True),
+            baca.selectors.leaf(22, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.StopBeam(),
-            baca.leaf(25, pitched=True),
+            baca.selectors.leaf(25, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.StartBeam(),
-            baca.leaf(26, pitched=True),
+            baca.selectors.leaf(26, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.StopBeam(),
-            baca.leaf(31, pitched=True),
+            baca.selectors.leaf(31, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.StartBeam(),
-            baca.leaf(32, pitched=True),
+            baca.selectors.leaf(32, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.StopBeam(),
-            baca.leaf(36, pitched=True),
+            baca.selectors.leaf(36, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.StartBeam(),
-            baca.leaf(17, pitched=True),
+            baca.selectors.leaf(17, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.StopBeam(),
-            baca.leaf(20, pitched=True),
+            baca.selectors.leaf(20, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.StartBeam(),
-            baca.leaf(22, pitched=True),
+            baca.selectors.leaf(22, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.StopBeam(),
-            baca.leaf(25, pitched=True),
+            baca.selectors.leaf(25, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.StartBeam(),
-            baca.leaf(29, pitched=True),
+            baca.selectors.leaf(29, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.StopBeam(),
-            baca.leaf(32, pitched=True),
+            baca.selectors.leaf(32, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.StartBeam(),
-            baca.leaf(34, pitched=True),
+            baca.selectors.leaf(34, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.StopBeam(),
-            baca.leaf(37, pitched=True),
+            baca.selectors.leaf(37, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.StartBeam(),
-            baca.leaf(41, pitched=True),
+            baca.selectors.leaf(41, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.StopBeam(),
-            baca.leaf(44, pitched=True),
+            baca.selectors.leaf(44, pitched=True),
         ),
-        evans.attach("Voice 2", abjad.Dynamic("p"), baca.leaf(0, pitched=True)),
+        evans.attach("Voice 2", abjad.Dynamic("p"), baca.selectors.leaf(0, pitched=True)),
         evans.attach(
             "Voice 2",
             abjad.Markup(
                 r"""\markup "detune string 1" """, literal=True, direction=abjad.Up
             ),
-            baca.leaf(0, pitched=True),
+            baca.selectors.leaf(0, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.Markup(
                 r"""\markup "keep scord." """, literal=True, direction=abjad.Up
             ),
-            baca.leaf(15, pitched=True),
+            baca.selectors.leaf(15, pitched=True),
         ),
         evans.call(
             "Voice 2",
@@ -202,52 +202,52 @@ maker = evans.SegmentMaker(
         evans.attach(
             "Voice 2",
             abjad.Dynamic("mf"),
-            baca.leaf(16, pitched=True),
+            baca.selectors.leaf(16, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.Dynamic("ff"),
-            baca.leaf(22, pitched=True),
+            baca.selectors.leaf(22, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.Dynamic("f"),
-            baca.leaf(26, pitched=True),
+            baca.selectors.leaf(26, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.Dynamic("mf"),
-            baca.leaf(29, pitched=True),
+            baca.selectors.leaf(29, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.Dynamic("ff"),
-            baca.leaf(34, pitched=True),
+            baca.selectors.leaf(34, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.Dynamic("mp"),
-            baca.leaf(38, pitched=True),
+            baca.selectors.leaf(38, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.Dynamic("f"),
-            baca.leaf(41, pitched=True),
+            baca.selectors.leaf(41, pitched=True),
         ),
-        evans.attach("Voice 2", abjad.Dynamic("p"), baca.leaf(46, pitched=True)),
+        evans.attach("Voice 2", abjad.Dynamic("p"), baca.selectors.leaf(46, pitched=True)),
         evans.attach(
             "Voice 2",
             abjad.Markup(
                 r"""\markup "detune string 2" """, literal=True, direction=abjad.Up
             ),
-            baca.leaf(46, pitched=True),
+            baca.selectors.leaf(46, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.Markup(
                 r"""\markup "keep scord." """, literal=True, direction=abjad.Up
             ),
-            baca.leaf(55, pitched=True),
+            baca.selectors.leaf(55, pitched=True),
         ),
         evans.call(
             "Voice 2",
@@ -263,20 +263,20 @@ maker = evans.SegmentMaker(
             .leaves(pitched=True)
             .get([46, 47, 48, 49, 50, 51, 52, 53, 54, 55]),
         ),
-        evans.attach("Voice 2", abjad.Dynamic("p"), baca.leaf(56, pitched=True)),
+        evans.attach("Voice 2", abjad.Dynamic("p"), baca.selectors.leaf(56, pitched=True)),
         evans.attach(
             "Voice 2",
             abjad.Markup(
                 r"""\markup "detune string 3" """, literal=True, direction=abjad.Up
             ),
-            baca.leaf(56, pitched=True),
+            baca.selectors.leaf(56, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.Markup(
                 r"""\markup "keep scord." """, literal=True, direction=abjad.Up
             ),
-            baca.leaf(73, pitched=True),
+            baca.selectors.leaf(73, pitched=True),
         ),
         evans.call(
             "Voice 2",
@@ -299,82 +299,82 @@ maker = evans.SegmentMaker(
         evans.attach(
             "Voice 1",
             abjad.Dynamic("p"),
-            baca.leaf(0, pitched=True),
+            baca.selectors.leaf(0, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.Dynamic("mp"),
-            baca.leaf(16, pitched=True),
+            baca.selectors.leaf(16, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.Dynamic("ff"),
-            baca.leaf(22, pitched=True),
+            baca.selectors.leaf(22, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.Dynamic("mp"),
-            baca.leaf(37, pitched=True),
+            baca.selectors.leaf(37, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.Dynamic("p"),
-            baca.leaf(45, pitched=True),
+            baca.selectors.leaf(45, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.Dynamic("p"),
-            baca.leaf(55, pitched=True),
+            baca.selectors.leaf(55, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.StartSlur(),
-            baca.leaf(22, pitched=True),
+            baca.selectors.leaf(22, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.StopSlur(),
-            baca.leaf(25, pitched=True),
+            baca.selectors.leaf(25, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.StartSlur(),
-            baca.leaf(26, pitched=True),
+            baca.selectors.leaf(26, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.StopSlur(),
-            baca.leaf(31, pitched=True),
+            baca.selectors.leaf(31, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.StartSlur(),
-            baca.leaf(32, pitched=True),
+            baca.selectors.leaf(32, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.StopSlur(),
-            baca.leaf(36, pitched=True),
+            baca.selectors.leaf(36, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.StartSlur(),
-            baca.leaf(37, pitched=True),
+            baca.selectors.leaf(37, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.StopSlur(),
-            baca.leaf(41, pitched=True),
+            baca.selectors.leaf(41, pitched=True),
         ),
         evans.attach(
             "Global Context",
             section_title,
-            baca.leaf(0),
+            baca.selectors.leaf(0),
         ),
         evans.attach(
             "Global Context",
             mark_106,
-            baca.leaf(0),
+            baca.selectors.leaf(0),
         ),
     ],
     score_template=score,

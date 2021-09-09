@@ -621,12 +621,12 @@ maker = evans.SegmentMaker(
         evans.attach(
             "Global Context",
             section_title,
-            baca.leaf(0),
+            baca.selectors.leaf(0),
         ),
         evans.attach(
             "Global Context",
             mark_135,
-            baca.leaf(0),
+            baca.selectors.leaf(0),
         ),
     ],
     score_template=score,
