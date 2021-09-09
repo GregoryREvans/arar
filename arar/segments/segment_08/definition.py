@@ -170,7 +170,9 @@ maker = evans.SegmentMaker(
             abjad.StopBeam(),
             baca.selectors.leaf(44, pitched=True),
         ),
-        evans.attach("Voice 2", abjad.Dynamic("p"), baca.selectors.leaf(0, pitched=True)),
+        evans.attach(
+            "Voice 2", abjad.Dynamic("p"), baca.selectors.leaf(0, pitched=True)
+        ),
         evans.attach(
             "Voice 2",
             abjad.Markup(
@@ -234,7 +236,9 @@ maker = evans.SegmentMaker(
             abjad.Dynamic("f"),
             baca.selectors.leaf(41, pitched=True),
         ),
-        evans.attach("Voice 2", abjad.Dynamic("p"), baca.selectors.leaf(46, pitched=True)),
+        evans.attach(
+            "Voice 2", abjad.Dynamic("p"), baca.selectors.leaf(46, pitched=True)
+        ),
         evans.attach(
             "Voice 2",
             abjad.Markup(
@@ -263,7 +267,9 @@ maker = evans.SegmentMaker(
             .leaves(pitched=True)
             .get([46, 47, 48, 49, 50, 51, 52, 53, 54, 55]),
         ),
-        evans.attach("Voice 2", abjad.Dynamic("p"), baca.selectors.leaf(56, pitched=True)),
+        evans.attach(
+            "Voice 2", abjad.Dynamic("p"), baca.selectors.leaf(56, pitched=True)
+        ),
         evans.attach(
             "Voice 2",
             abjad.Markup(

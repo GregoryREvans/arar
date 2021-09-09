@@ -138,8 +138,12 @@ maker = evans.SegmentMaker(
             "Voice 1", flat_gliss, abjad.select().leaves(pitched=True).get([24, 25])
         ),
         evans.call("Voice 2", flat_gliss, abjad.select()),
-        evans.attach("Voice 1", abjad.Dynamic("p"), baca.selectors.leaf(0, pitched=True)),
-        evans.attach("Voice 2", abjad.Dynamic("p"), baca.selectors.leaf(0, pitched=True)),
+        evans.attach(
+            "Voice 1", abjad.Dynamic("p"), baca.selectors.leaf(0, pitched=True)
+        ),
+        evans.attach(
+            "Voice 2", abjad.Dynamic("p"), baca.selectors.leaf(0, pitched=True)
+        ),
         evans.attach("Voice 2", abjad.Articulation("accent"), baca.selectors.leaf(0)),
         evans.attach("Voice 2", abjad.Articulation("staccato"), baca.selectors.leaf(1)),
         evans.attach("Voice 2", abjad.Articulation("staccato"), baca.selectors.leaf(2)),
@@ -150,8 +154,12 @@ maker = evans.SegmentMaker(
         evans.attach("Voice 2", abjad.Articulation("staccato"), baca.selectors.leaf(7)),
         evans.attach("Voice 2", abjad.Articulation("staccato"), baca.selectors.leaf(8)),
         evans.attach("Voice 2", abjad.Articulation("accent"), baca.selectors.leaf(9)),
-        evans.attach("Voice 2", abjad.Articulation("staccato"), baca.selectors.leaf(10)),
-        evans.attach("Voice 2", abjad.Articulation("staccato"), baca.selectors.leaf(11)),
+        evans.attach(
+            "Voice 2", abjad.Articulation("staccato"), baca.selectors.leaf(10)
+        ),
+        evans.attach(
+            "Voice 2", abjad.Articulation("staccato"), baca.selectors.leaf(11)
+        ),
         evans.attach(
             "Voice 1",
             abjad.Dynamic("f"),
@@ -257,15 +265,33 @@ maker = evans.SegmentMaker(
             hide_tuplet_bracket,
             abjad.select().components(abjad.Tuplet).get([3]),
         ),
-        evans.attach("Voice 2", abjad.Dynamic("f"), baca.selectors.leaf(12, pitched=True)),
-        evans.attach("Voice 2", abjad.StartHairpin(">"), baca.selectors.leaf(12, pitched=True)),
-        evans.attach("Voice 2", abjad.Dynamic("p"), baca.selectors.leaf(14, pitched=True)),
-        evans.attach("Voice 2", abjad.Dynamic("f"), baca.selectors.leaf(15, pitched=True)),
-        evans.attach("Voice 2", abjad.StartHairpin(">"), baca.selectors.leaf(15, pitched=True)),
-        evans.attach("Voice 2", abjad.Dynamic("p"), baca.selectors.leaf(18, pitched=True)),
-        evans.attach("Voice 2", abjad.Dynamic("pp"), baca.selectors.leaf(19, pitched=True)),
-        evans.attach("Voice 2", abjad.StartHairpin("<"), baca.selectors.leaf(19, pitched=True)),
-        evans.attach("Voice 2", abjad.Dynamic("ff"), baca.selectors.leaf(21, pitched=True)),
+        evans.attach(
+            "Voice 2", abjad.Dynamic("f"), baca.selectors.leaf(12, pitched=True)
+        ),
+        evans.attach(
+            "Voice 2", abjad.StartHairpin(">"), baca.selectors.leaf(12, pitched=True)
+        ),
+        evans.attach(
+            "Voice 2", abjad.Dynamic("p"), baca.selectors.leaf(14, pitched=True)
+        ),
+        evans.attach(
+            "Voice 2", abjad.Dynamic("f"), baca.selectors.leaf(15, pitched=True)
+        ),
+        evans.attach(
+            "Voice 2", abjad.StartHairpin(">"), baca.selectors.leaf(15, pitched=True)
+        ),
+        evans.attach(
+            "Voice 2", abjad.Dynamic("p"), baca.selectors.leaf(18, pitched=True)
+        ),
+        evans.attach(
+            "Voice 2", abjad.Dynamic("pp"), baca.selectors.leaf(19, pitched=True)
+        ),
+        evans.attach(
+            "Voice 2", abjad.StartHairpin("<"), baca.selectors.leaf(19, pitched=True)
+        ),
+        evans.attach(
+            "Voice 2", abjad.Dynamic("ff"), baca.selectors.leaf(21, pitched=True)
+        ),
         evans.call(
             "Voice 2",
             evans.ArticulationHandler(["tremolo"]),

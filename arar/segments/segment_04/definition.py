@@ -97,19 +97,37 @@ maker = evans.SegmentMaker(
         evans.attach("Voice 2", abjad.Articulation("staccato"), baca.selectors.leaf(7)),
         evans.attach("Voice 2", abjad.Articulation("staccato"), baca.selectors.leaf(8)),
         evans.attach("Voice 2", abjad.Articulation("staccato"), baca.selectors.leaf(9)),
-        evans.attach("Voice 2", abjad.Articulation("staccato"), baca.selectors.leaf(10)),
+        evans.attach(
+            "Voice 2", abjad.Articulation("staccato"), baca.selectors.leaf(10)
+        ),
         evans.attach("Voice 2", abjad.Articulation("accent"), baca.selectors.leaf(11)),
-        evans.attach("Voice 2", abjad.Articulation("staccato"), baca.selectors.leaf(12)),
-        evans.attach("Voice 2", abjad.Articulation("staccato"), baca.selectors.leaf(13)),
-        evans.attach("Voice 2", abjad.Articulation("staccato"), baca.selectors.leaf(14)),
+        evans.attach(
+            "Voice 2", abjad.Articulation("staccato"), baca.selectors.leaf(12)
+        ),
+        evans.attach(
+            "Voice 2", abjad.Articulation("staccato"), baca.selectors.leaf(13)
+        ),
+        evans.attach(
+            "Voice 2", abjad.Articulation("staccato"), baca.selectors.leaf(14)
+        ),
         evans.attach("Voice 2", abjad.Articulation("accent"), baca.selectors.leaf(15)),
-        evans.attach("Voice 2", abjad.Articulation("staccato"), baca.selectors.leaf(16)),
-        evans.attach("Voice 2", abjad.Articulation("staccato"), baca.selectors.leaf(17)),
+        evans.attach(
+            "Voice 2", abjad.Articulation("staccato"), baca.selectors.leaf(16)
+        ),
+        evans.attach(
+            "Voice 2", abjad.Articulation("staccato"), baca.selectors.leaf(17)
+        ),
         evans.attach("Voice 2", abjad.Articulation("accent"), baca.selectors.leaf(18)),
-        evans.attach("Voice 2", abjad.Articulation("staccato"), baca.selectors.leaf(19)),
-        evans.attach("Voice 2", abjad.Articulation("staccato"), baca.selectors.leaf(20)),
+        evans.attach(
+            "Voice 2", abjad.Articulation("staccato"), baca.selectors.leaf(19)
+        ),
+        evans.attach(
+            "Voice 2", abjad.Articulation("staccato"), baca.selectors.leaf(20)
+        ),
         evans.attach("Voice 2", abjad.Articulation("accent"), baca.selectors.leaf(21)),
-        evans.attach("Voice 2", abjad.Articulation("staccato"), baca.selectors.leaf(22)),
+        evans.attach(
+            "Voice 2", abjad.Articulation("staccato"), baca.selectors.leaf(22)
+        ),
         evans.attach(
             "Voice 2",
             abjad.Markup(
@@ -128,8 +146,12 @@ maker = evans.SegmentMaker(
             ),
             baca.selectors.leaf(22),
         ),
-        evans.attach("Voice 1", abjad.Dynamic("p"), baca.selectors.leaf(0, pitched=True)),
-        evans.attach("Voice 2", abjad.Dynamic("p"), baca.selectors.leaf(0, pitched=True)),
+        evans.attach(
+            "Voice 1", abjad.Dynamic("p"), baca.selectors.leaf(0, pitched=True)
+        ),
+        evans.attach(
+            "Voice 2", abjad.Dynamic("p"), baca.selectors.leaf(0, pitched=True)
+        ),
         evans.attach(
             "Global Context",
             section_title,
