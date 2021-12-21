@@ -65,8 +65,8 @@ class FlatGlissMaker:
             apply_to="runs",
         )
         trem_handler = evans.ArticulationHandler(["tremolo"])
-        leaves = abjad.select(selections).leaves()
-        for run in abjad.select(selections).runs():
+        leaves = abjad.Selection(selections).leaves()
+        for run in abjad.Selection(selections).runs():
             if len(run) == 1:
                 next_leaf = abjad.get.leaf(run[0], 1)
                 next_next_leaf = abjad.get.leaf(next_leaf, 1)

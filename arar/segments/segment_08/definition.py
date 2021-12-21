@@ -14,7 +14,7 @@ from arar.materials.timespans.segment_08.convert_timespans import (
 
 
 def add_staccato(selections):
-    for leaf in abjad.select(selections).leaves(pitched=True):
+    for leaf in abjad.Selection(selections).leaves(pitched=True):
         abjad.attach(abjad.Articulation("staccato"), leaf)
 
 
@@ -25,8 +25,8 @@ def flat_gliss(selections):
         forget=False,
         apply_to="runs",
     )
-    leaves = abjad.select(selections).leaves()
-    for run in abjad.select(selections).runs():
+    leaves = abjad.Selection(selections).leaves()
+    for run in abjad.Selection(selections).runs():
         gliss_handler(run[:])
     for leaf in leaves:
         literal_1 = abjad.LilyPondLiteral(
@@ -57,7 +57,6 @@ mark_106 = abjad.LilyPondLiteral(
 section_title = abjad.Markup(
     r"""\markup { \box \override #'(font-name . "STIXGeneral Bold") \caps G}""",
     direction=abjad.Up,
-    literal=True,
 )
 
 maker = evans.SegmentMaker(
@@ -175,29 +174,25 @@ maker = evans.SegmentMaker(
         ),
         evans.attach(
             "Voice 2",
-            abjad.Markup(
-                r"""\markup "detune string 1" """, literal=True, direction=abjad.Up
-            ),
+            abjad.Markup(r"""\markup "detune string 1" """, direction=abjad.Up),
             baca.selectors.leaf(0, pitched=True),
         ),
         evans.attach(
             "Voice 2",
-            abjad.Markup(
-                r"""\markup "keep scord." """, literal=True, direction=abjad.Up
-            ),
+            abjad.Markup(r"""\markup "keep scord." """, direction=abjad.Up),
             baca.selectors.leaf(15, pitched=True),
         ),
         evans.call(
             "Voice 2",
             flat_gliss,
-            abjad.select()
+            lambda _: abjad.Selection(_)
             .leaves(pitched=True)
             .get([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]),
         ),
         evans.call(
             "Voice 2",
             add_staccato,
-            abjad.select()
+            lambda _: abjad.Selection(_)
             .leaves(pitched=True)
             .get([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]),
         ),
@@ -241,29 +236,25 @@ maker = evans.SegmentMaker(
         ),
         evans.attach(
             "Voice 2",
-            abjad.Markup(
-                r"""\markup "detune string 2" """, literal=True, direction=abjad.Up
-            ),
+            abjad.Markup(r"""\markup "detune string 2" """, direction=abjad.Up),
             baca.selectors.leaf(46, pitched=True),
         ),
         evans.attach(
             "Voice 2",
-            abjad.Markup(
-                r"""\markup "keep scord." """, literal=True, direction=abjad.Up
-            ),
+            abjad.Markup(r"""\markup "keep scord." """, direction=abjad.Up),
             baca.selectors.leaf(55, pitched=True),
         ),
         evans.call(
             "Voice 2",
             flat_gliss,
-            abjad.select()
+            lambda _: abjad.Selection(_)
             .leaves(pitched=True)
             .get([46, 47, 48, 49, 50, 51, 52, 53, 54, 55]),
         ),
         evans.call(
             "Voice 2",
             add_staccato,
-            abjad.select()
+            lambda _: abjad.Selection(_)
             .leaves(pitched=True)
             .get([46, 47, 48, 49, 50, 51, 52, 53, 54, 55]),
         ),
@@ -272,22 +263,18 @@ maker = evans.SegmentMaker(
         ),
         evans.attach(
             "Voice 2",
-            abjad.Markup(
-                r"""\markup "detune string 3" """, literal=True, direction=abjad.Up
-            ),
+            abjad.Markup(r"""\markup "detune string 3" """, direction=abjad.Up),
             baca.selectors.leaf(56, pitched=True),
         ),
         evans.attach(
             "Voice 2",
-            abjad.Markup(
-                r"""\markup "keep scord." """, literal=True, direction=abjad.Up
-            ),
+            abjad.Markup(r"""\markup "keep scord." """, direction=abjad.Up),
             baca.selectors.leaf(73, pitched=True),
         ),
         evans.call(
             "Voice 2",
             flat_gliss,
-            abjad.select()
+            lambda _: abjad.Selection(_)
             .leaves(pitched=True)
             .get(
                 [56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73]
@@ -296,7 +283,7 @@ maker = evans.SegmentMaker(
         evans.call(
             "Voice 2",
             add_staccato,
-            abjad.select()
+            lambda _: abjad.Selection(_)
             .leaves(pitched=True)
             .get(
                 [56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73]

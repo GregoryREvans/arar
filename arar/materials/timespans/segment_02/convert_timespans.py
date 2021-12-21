@@ -43,7 +43,7 @@ for span in segment_02_rhythm_timespans:
 # ######
 # pitch#
 # ######
-voicewise_material = abjad.OrderedDict(
+voicewise_material = dict(
     [
         ("Voice 1", pitch_handler_one),
         ("Voice 2", pitch_handler_two),

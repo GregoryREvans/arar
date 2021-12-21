@@ -22,8 +22,8 @@ def flat_gliss(selections):
         ["tremolo"],
         forget=False,
     )
-    leaves = abjad.select(selections).leaves()
-    for run in abjad.select(selections).runs():
+    leaves = abjad.Selection(selections).leaves()
+    for run in abjad.Selection(selections).runs():
         gliss_handler(run[:])
         tremolo_handler(run[:])
     for leaf in leaves:
@@ -40,12 +40,12 @@ def flat_gliss(selections):
 
 
 def hide_tuplet_bracket(selections):
-    for tuplet in abjad.select(selections).components(abjad.Tuplet):
+    for tuplet in abjad.Selection(selections).components(abjad.Tuplet):
         tuplet.hide = True
 
 
 def attach_material(selections):
-    leaves = abjad.select(selections).leaves(pitched=True)
+    leaves = abjad.Selection(selections).leaves(pitched=True)
     cyc_dynamics = evans.CyclicList(["pp", "f", "p", "mf", "mp", "mf"], forget=False)
     cyc_hairpins = evans.CyclicList(["<", ">"], forget=False)
     for leaf in leaves:
@@ -63,8 +63,8 @@ tremolo_types = evans.CyclicList(
 
 
 def add_trem_name(selections):
-    for run in abjad.select(selections).runs():
-        leaf_1 = abjad.select(run).leaf(0)
+    for run in abjad.Selection(selections).runs():
+        leaf_1 = abjad.Selection(run).leaf(0)
         following_rest = abjad.get.leaf(run[-1], 1)
         type = tremolo_types(r=1)[0]
         start = abjad.StartTextSpan(
@@ -93,7 +93,6 @@ mark_135 = abjad.LilyPondLiteral(
 section_title = abjad.Markup(
     r"""\markup { \box \override #'(font-name . "STIXGeneral Bold") \caps F}""",
     direction=abjad.Up,
-    literal=True,
 )
 
 maker = evans.SegmentMaker(
@@ -113,12 +112,12 @@ maker = evans.SegmentMaker(
         evans.call(
             "Voice 1",
             flute_pitch_handler_one,
-            abjad.select(),
+            lambda _: abjad.Selection(_),
         ),
         evans.call(
             "Voice 2",
             guitar_pitch_handler_one,
-            abjad.select(),
+            lambda _: abjad.Selection(_),
         ),
         evans.attach(
             "Voice 1",
@@ -128,92 +127,92 @@ maker = evans.SegmentMaker(
         evans.call(
             "Voice 1",
             flat_gliss,
-            abjad.select().leaves(pitched=True).get([0, 1]),
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([0, 1]),
         ),
         evans.call(
             "Voice 1",
             flat_gliss,
-            abjad.select().leaves(pitched=True).get([2, 3]),
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([2, 3]),
         ),
         evans.call(
             "Voice 1",
             flat_gliss,
-            abjad.select().leaves(pitched=True).get([4, 5]),
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([4, 5]),
         ),
         evans.call(
             "Voice 1",
             flat_gliss,
-            abjad.select().leaves(pitched=True).get([6, 7]),
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([6, 7]),
         ),
         evans.call(
             "Voice 1",
             flat_gliss,
-            abjad.select().leaves(pitched=True).get([8, 9]),
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([8, 9]),
         ),
         evans.call(
             "Voice 1",
             flat_gliss,
-            abjad.select().leaves(pitched=True).get([10, 11]),
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([10, 11]),
         ),
         evans.call(
             "Voice 1",
             flat_gliss,
-            abjad.select().leaves(pitched=True).get([12, 13]),
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([12, 13]),
         ),
         evans.call(
             "Voice 1",
             flat_gliss,
-            abjad.select().leaves(pitched=True).get([14, 15]),
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([14, 15]),
         ),
         evans.call(
             "Voice 1",
             flat_gliss,
-            abjad.select().leaves(pitched=True).get([16, 17]),
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([16, 17]),
         ),
         evans.call(
             "Voice 1",
             flat_gliss,
-            abjad.select().leaves(pitched=True).get([18, 19]),
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([18, 19]),
         ),
         evans.call(
             "Voice 1",
             flat_gliss,
-            abjad.select().leaves(pitched=True).get([20, 21]),
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([20, 21]),
         ),
         evans.call(
             "Voice 1",
             attach_material,
-            abjad.select().runs(),
+            lambda _: abjad.Selection(_).runs(),
         ),
         evans.call(
             "Voice 2",
             flat_gliss,
-            abjad.select(),
+            lambda _: abjad.Selection(_),
         ),
         evans.call(
             "Voice 2",
             attach_material,
-            abjad.select().runs().get([0]),
+            lambda _: abjad.Selection(_).runs().get([0]),
         ),
         evans.call(
             "Voice 2",
             attach_material,
-            abjad.select().runs().get([1]),
+            lambda _: abjad.Selection(_).runs().get([1]),
         ),
         evans.call(
             "Voice 2",
             attach_material,
-            abjad.select().runs().get([2]),
+            lambda _: abjad.Selection(_).runs().get([2]),
         ),
         evans.call(
             "Voice 2",
             attach_material,
-            abjad.select().runs().get([3]),
+            lambda _: abjad.Selection(_).runs().get([3]),
         ),
         evans.call(
             "Voice 2",
             attach_material,
-            abjad.select().runs().get([4]),
+            lambda _: abjad.Selection(_).runs().get([4]),
         ),
         evans.attach(
             "Voice 2",
@@ -223,12 +222,12 @@ maker = evans.SegmentMaker(
         evans.call(
             "Voice 2",
             hide_tuplet_bracket,
-            abjad.select().components(abjad.Tuplet).get([2]),
+            lambda _: abjad.Selection(_).components(abjad.Tuplet).get([2]),
         ),
         evans.call(
             "Voice 2",
             add_trem_name,
-            abjad.select(),
+            lambda _: abjad.Selection(_),
         ),
         evans.attach(
             "Global Context",

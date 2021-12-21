@@ -12,7 +12,7 @@ from arar.materials.timespans.segment_05.convert_timespans import rhythm_command
 
 
 def add_staccato(selections):
-    for leaf in abjad.select(selections).leaves(pitched=True):
+    for leaf in abjad.Selection(selections).leaves(pitched=True):
         abjad.attach(abjad.Articulation("staccato"), leaf)
 
 
@@ -32,7 +32,6 @@ mark_150 = abjad.LilyPondLiteral(
 section_title = abjad.Markup(
     r"""\markup { \box \override #'(font-name . "STIXGeneral Bold") \caps D}""",
     direction=abjad.Up,
-    literal=True,
 )
 
 maker = evans.SegmentMaker(
@@ -52,12 +51,12 @@ maker = evans.SegmentMaker(
         evans.call(
             "Voice 1",
             flute_pitch_handler_one,
-            abjad.select(),
+            lambda _: abjad.Selection(_),
         ),
         evans.call(
             "Voice 2",
             guitar_pitch_handler_five,
-            abjad.select(),
+            lambda _: abjad.Selection(_),
         ),
         evans.attach(
             "Voice 2",
@@ -122,7 +121,7 @@ maker = evans.SegmentMaker(
         evans.call(
             "Voice 2",
             add_staccato,
-            abjad.select(),
+            lambda _: abjad.Selection(_),
         ),
         evans.attach(
             "Voice 1",
@@ -309,7 +308,6 @@ maker = evans.SegmentMaker(
             abjad.Markup(
                 r"\markup {detune string 4}",
                 direction=abjad.Up,
-                literal=True,
             ),
             baca.selectors.leaf(4),
         ),
@@ -318,7 +316,6 @@ maker = evans.SegmentMaker(
             abjad.Markup(
                 r"\markup {keep scord.}",
                 direction=abjad.Up,
-                literal=True,
             ),
             baca.selectors.leaf(-7),
         ),

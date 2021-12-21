@@ -37,11 +37,11 @@ sel = h(durs)
 staff = abjad.Staff()
 for _ in sel:
     staff.append(_)
-abjad.attach(abjad.TimeSignature(durs[0]), abjad.select(staff).leaf(0))
+abjad.attach(abjad.TimeSignature(durs[0]), abjad.Selection(staff).leaf(0))
 
 markup = abjad.Markup.column(
     [
-        abjad.Markup(fr"\markup {{ {_} }}", literal=True)
+        abjad.Markup(fr"\markup {{ {_} }}")
         for _ in [
             "(1 (1 1 1 1 1 1 1 1 1 1 1 1))",
             "(1 ((1 (1 1 1)) (1 (1 1 1)) (1 (1 1 1)) (1 (1 1 1))))",
@@ -65,6 +65,6 @@ markup = abjad.Markup.column(
     ],
     direction=abjad.Up,
 )
-abjad.attach(markup, abjad.select(staff).leaf(0))
+abjad.attach(markup, abjad.Selection(staff).leaf(0))
 
 abjad.show(staff)

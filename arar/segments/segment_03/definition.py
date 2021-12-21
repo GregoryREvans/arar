@@ -12,7 +12,7 @@ from arar.materials.timespans.segment_03.convert_timespans import rhythm_command
 
 
 def hide_tuplet_bracket(selections):
-    for tuplet in abjad.select(selections).components(abjad.Tuplet):
+    for tuplet in abjad.Selection(selections).components(abjad.Tuplet):
         tuplet.hide = True
 
 
@@ -32,7 +32,6 @@ mark_85 = abjad.LilyPondLiteral(
 section_title = abjad.Markup(
     r"""\markup { \box \override #'(font-name . "STIXGeneral Bold") \caps B}""",
     direction=abjad.Up,
-    literal=True,
 )
 
 maker = evans.SegmentMaker(
@@ -51,23 +50,23 @@ maker = evans.SegmentMaker(
         evans.call(
             "score",
             evans.SegmentMaker.rewrite_meter,
-            abjad.select().components(abjad.Score),
+            lambda _: abjad.Selection(_).components(abjad.Score),
         ),
         "skips",
         evans.call(
             "Voice 1",
             flute_pitch_handler_three,
-            abjad.select(),
+            lambda _: abjad.Selection(_),
         ),
         evans.call(
             "Voice 2",
             guitar_pitch_handler_three,
-            abjad.select(),
+            lambda _: abjad.Selection(_),
         ),
         evans.call(
             "score",
             evans.SegmentMaker.beam_score,
-            abjad.select().components(abjad.Score),
+            lambda _: abjad.Selection(_).components(abjad.Score),
         ),
         evans.attach(
             "Voice 1",

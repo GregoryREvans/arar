@@ -1,9 +1,9 @@
 import abjad
-handler_to_value = abjad.OrderedDict(
+handler_to_value = dict(
     [
         (
             'flute_rhythm_handler_seven',
-            abjad.OrderedDict(
+            dict(
                 [
                     ('state', 13),
                     ]
@@ -11,7 +11,7 @@ handler_to_value = abjad.OrderedDict(
             ),
         (
             'flute_rhythm_handler_three',
-            abjad.OrderedDict(
+            dict(
                 [
                     ('state', 4),
                     ]
@@ -19,11 +19,11 @@ handler_to_value = abjad.OrderedDict(
             ),
         (
             'silence_handler',
-            abjad.OrderedDict(
+            dict(
                 [
                     (
                         'state',
-                        abjad.OrderedDict(
+                        dict(
                             [
                                 ('divisions_consumed', 1),
                                 ('logical_ties_produced', 1),
@@ -35,7 +35,7 @@ handler_to_value = abjad.OrderedDict(
             ),
         (
             'guitar_rhythm_handler_seven',
-            abjad.OrderedDict(
+            dict(
                 [
                     ('state', 2),
                     ]
@@ -43,7 +43,7 @@ handler_to_value = abjad.OrderedDict(
             ),
         (
             'guitar_rhythm_handler_three',
-            abjad.OrderedDict(
+            dict(
                 [
                     ('state', 4),
                     ]

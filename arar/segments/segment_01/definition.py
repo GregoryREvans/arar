@@ -18,8 +18,8 @@ def flat_gliss(selections):
         forget=False,
         apply_to="runs",
     )
-    leaves = abjad.select(selections).leaves()
-    for run in abjad.select(selections).runs():
+    leaves = abjad.Selection(selections).leaves()
+    for run in abjad.Selection(selections).runs():
         gliss_handler(run[:])
     for leaf in leaves:
         literal_1 = abjad.LilyPondLiteral(
@@ -41,8 +41,8 @@ tremolo_types = evans.CyclicList(
 
 
 def add_trem_name(selections):
-    for run in abjad.select(selections).runs():
-        leaf_1 = abjad.select(run).leaf(0)
+    for run in abjad.Selection(selections).runs():
+        leaf_1 = abjad.Selection(run).leaf(0)
         following_rest = abjad.get.leaf(run[-1], 1)
         type = tremolo_types(r=1)[0]
         start = abjad.StartTextSpan(
@@ -71,7 +71,6 @@ mark_135 = abjad.LilyPondLiteral(
 section_title = abjad.Markup(
     r"""\markup { \box \override #'(font-name . "STIXGeneral Bold") \caps Introduction}""",
     direction=abjad.Up,
-    literal=True,
 )
 
 maker = evans.SegmentMaker(
@@ -91,532 +90,532 @@ maker = evans.SegmentMaker(
         evans.call(
             "Voice 1",
             flute_pitch_handler_one,
-            abjad.select(),
+            lambda _: abjad.Selection(_),
         ),
         evans.call(
             "Voice 2",
             guitar_pitch_handler_one,
-            abjad.select(),
+            lambda _: abjad.Selection(_),
         ),
         evans.call(
             "Voice 1",
             flat_gliss,
-            abjad.select().leaves(pitched=True).get([0, 1]),
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([0, 1]),
         ),
         evans.call(
             "Voice 1",
             flat_gliss,
-            abjad.select().leaves(pitched=True).get([2, 3]),
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([2, 3]),
         ),
         evans.call(
             "Voice 1",
             flat_gliss,
-            abjad.select().leaves(pitched=True).get([4, 5]),
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([4, 5]),
         ),
         evans.call(
             "Voice 1",
             flat_gliss,
-            abjad.select().leaves(pitched=True).get([6, 7]),
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([6, 7]),
         ),
         evans.call(
             "Voice 1",
             flat_gliss,
-            abjad.select().leaves(pitched=True).get([8, 9]),
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([8, 9]),
         ),
         evans.call(
             "Voice 1",
             flat_gliss,
-            abjad.select().leaves(pitched=True).get([10, 11]),
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([10, 11]),
         ),
         evans.call(
             "Voice 1",
             flat_gliss,
-            abjad.select().leaves(pitched=True).get([12, 13]),
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([12, 13]),
         ),
         evans.call(
             "Voice 1",
             flat_gliss,
-            abjad.select().leaves(pitched=True).get([14, 15]),
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([14, 15]),
         ),
         evans.call(
             "Voice 1",
             flat_gliss,
-            abjad.select().leaves(pitched=True).get([16, 17]),
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([16, 17]),
         ),
         evans.call(
             "Voice 1",
             flat_gliss,
-            abjad.select().leaves(pitched=True).get([18, 19]),
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([18, 19]),
         ),
         evans.call(
             "Voice 1",
             flat_gliss,
-            abjad.select().leaves(pitched=True).get([20, 21]),
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([20, 21]),
         ),
         evans.call(
             "Voice 1",
             flat_gliss,
-            abjad.select().leaves(pitched=True).get([22, 23]),
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([22, 23]),
         ),
         evans.call(
             "Voice 1",
             flat_gliss,
-            abjad.select().leaves(pitched=True).get([24, 25]),
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([24, 25]),
         ),
         evans.call(
             "Voice 1",
             flat_gliss,
-            abjad.select().leaves(pitched=True).get([26, 27]),
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([26, 27]),
         ),
         evans.call(
             "Voice 1",
             flat_gliss,
-            abjad.select().leaves(pitched=True).get([28, 29]),
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([28, 29]),
         ),
         evans.call(
             "Voice 1",
             flat_gliss,
-            abjad.select().leaves(pitched=True).get([30, 31]),
+            lambda _: abjad.Selection(_).leaves(pitched=True).get([30, 31]),
         ),
         evans.call(
             "Voice 2",
             flat_gliss,
-            abjad.select(),
+            lambda _: abjad.Selection(_),
         ),
         evans.call(
             "score",
             evans.ArticulationHandler(["tremolo"]),
-            abjad.select(),
+            lambda _: abjad.Selection(_),
         ),
         evans.attach(
             "Voice 1",
             abjad.Dynamic("pp"),
-            abjad.select().leaf(0, pitched=True),
+            lambda _: abjad.Selection(_).leaf(0, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.StartHairpin("<|"),
-            abjad.select().leaf(0, pitched=True),
+            lambda _: abjad.Selection(_).leaf(0, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.Dynamic("ff"),
-            abjad.select().leaf(1, pitched=True),
+            lambda _: abjad.Selection(_).leaf(1, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.Dynamic("p"),
-            abjad.select().leaf(2, pitched=True),
+            lambda _: abjad.Selection(_).leaf(2, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.StartHairpin("<|"),
-            abjad.select().leaf(2, pitched=True),
+            lambda _: abjad.Selection(_).leaf(2, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.Dynamic("f"),
-            abjad.select().leaf(3, pitched=True),
+            lambda _: abjad.Selection(_).leaf(3, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.Dynamic("mp"),
-            abjad.select().leaf(4, pitched=True),
+            lambda _: abjad.Selection(_).leaf(4, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.StartHairpin("<|"),
-            abjad.select().leaf(4, pitched=True),
+            lambda _: abjad.Selection(_).leaf(4, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.Dynamic("mf"),
-            abjad.select().leaf(5, pitched=True),
+            lambda _: abjad.Selection(_).leaf(5, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.Dynamic("p"),
-            abjad.select().leaf(6, pitched=True),
+            lambda _: abjad.Selection(_).leaf(6, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.StartHairpin("<|"),
-            abjad.select().leaf(6, pitched=True),
+            lambda _: abjad.Selection(_).leaf(6, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.Dynamic("f"),
-            abjad.select().leaf(7, pitched=True),
+            lambda _: abjad.Selection(_).leaf(7, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.Dynamic("pp"),
-            abjad.select().leaf(8, pitched=True),
+            lambda _: abjad.Selection(_).leaf(8, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.StartHairpin("<|"),
-            abjad.select().leaf(8, pitched=True),
+            lambda _: abjad.Selection(_).leaf(8, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.Dynamic("ff"),
-            abjad.select().leaf(9, pitched=True),
+            lambda _: abjad.Selection(_).leaf(9, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.Dynamic("f"),
-            abjad.select().leaf(10, pitched=True),
+            lambda _: abjad.Selection(_).leaf(10, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.StartHairpin(">"),
-            abjad.select().leaf(10, pitched=True),
+            lambda _: abjad.Selection(_).leaf(10, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.Dynamic("p"),
-            abjad.select().leaf(11, pitched=True),
+            lambda _: abjad.Selection(_).leaf(11, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.Dynamic("ff"),
-            abjad.select().leaf(12, pitched=True),
+            lambda _: abjad.Selection(_).leaf(12, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.StartHairpin(">"),
-            abjad.select().leaf(12, pitched=True),
+            lambda _: abjad.Selection(_).leaf(12, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.Dynamic("p"),
-            abjad.select().leaf(13, pitched=True),
+            lambda _: abjad.Selection(_).leaf(13, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.Dynamic("f"),
-            abjad.select().leaf(14, pitched=True),
+            lambda _: abjad.Selection(_).leaf(14, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.StartHairpin(">"),
-            abjad.select().leaf(14, pitched=True),
+            lambda _: abjad.Selection(_).leaf(14, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.Dynamic("p"),
-            abjad.select().leaf(15, pitched=True),
+            lambda _: abjad.Selection(_).leaf(15, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.Dynamic("mf"),
-            abjad.select().leaf(16, pitched=True),
+            lambda _: abjad.Selection(_).leaf(16, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.StartHairpin(">"),
-            abjad.select().leaf(16, pitched=True),
+            lambda _: abjad.Selection(_).leaf(16, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.Dynamic("p"),
-            abjad.select().leaf(17, pitched=True),
+            lambda _: abjad.Selection(_).leaf(17, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.Dynamic("mp"),
-            abjad.select().leaf(18, pitched=True),
+            lambda _: abjad.Selection(_).leaf(18, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.StartHairpin(">"),
-            abjad.select().leaf(18, pitched=True),
+            lambda _: abjad.Selection(_).leaf(18, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.Dynamic("p"),
-            abjad.select().leaf(19, pitched=True),
+            lambda _: abjad.Selection(_).leaf(19, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.Dynamic("ff"),
-            abjad.select().leaf(20, pitched=True),
+            lambda _: abjad.Selection(_).leaf(20, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.StartHairpin("|>"),
-            abjad.select().leaf(20, pitched=True),
+            lambda _: abjad.Selection(_).leaf(20, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.Dynamic("mp"),
-            abjad.select().leaf(21, pitched=True),
+            lambda _: abjad.Selection(_).leaf(21, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.Dynamic("p"),
-            abjad.select().leaf(22, pitched=True),
+            lambda _: abjad.Selection(_).leaf(22, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.StartHairpin("<|"),
-            abjad.select().leaf(22, pitched=True),
+            lambda _: abjad.Selection(_).leaf(22, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.Dynamic("f"),
-            abjad.select().leaf(23, pitched=True),
+            lambda _: abjad.Selection(_).leaf(23, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.Dynamic("ff"),
-            abjad.select().leaf(24, pitched=True),
+            lambda _: abjad.Selection(_).leaf(24, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.StartHairpin("|>"),
-            abjad.select().leaf(24, pitched=True),
+            lambda _: abjad.Selection(_).leaf(24, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.Dynamic("mp"),
-            abjad.select().leaf(25, pitched=True),
+            lambda _: abjad.Selection(_).leaf(25, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.Dynamic("p"),
-            abjad.select().leaf(26, pitched=True),
+            lambda _: abjad.Selection(_).leaf(26, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.StartHairpin("<|"),
-            abjad.select().leaf(26, pitched=True),
+            lambda _: abjad.Selection(_).leaf(26, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.Dynamic("f"),
-            abjad.select().leaf(27, pitched=True),
+            lambda _: abjad.Selection(_).leaf(27, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.Dynamic("ff"),
-            abjad.select().leaf(28, pitched=True),
+            lambda _: abjad.Selection(_).leaf(28, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.StartHairpin("|>"),
-            abjad.select().leaf(28, pitched=True),
+            lambda _: abjad.Selection(_).leaf(28, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.Dynamic("mp"),
-            abjad.select().leaf(29, pitched=True),
+            lambda _: abjad.Selection(_).leaf(29, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.Dynamic("p"),
-            abjad.select().leaf(30, pitched=True),
+            lambda _: abjad.Selection(_).leaf(30, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.StartHairpin("<|"),
-            abjad.select().leaf(30, pitched=True),
+            lambda _: abjad.Selection(_).leaf(30, pitched=True),
         ),
         evans.attach(
             "Voice 1",
             abjad.Dynamic("f"),
-            abjad.select().leaf(31, pitched=True),
+            lambda _: abjad.Selection(_).leaf(31, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.Dynamic("p"),
-            abjad.select().leaf(0, pitched=True),
+            lambda _: abjad.Selection(_).leaf(0, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.StartHairpin("<"),
-            abjad.select().leaf(0, pitched=True),
+            lambda _: abjad.Selection(_).leaf(0, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.Dynamic("f"),
-            abjad.select().leaf(1, pitched=True),
+            lambda _: abjad.Selection(_).leaf(1, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.StartHairpin(">"),
-            abjad.select().leaf(1, pitched=True),
+            lambda _: abjad.Selection(_).leaf(1, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.Dynamic("p"),
-            abjad.select().leaf(2, pitched=True),
+            lambda _: abjad.Selection(_).leaf(2, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.Dynamic("p"),
-            abjad.select().leaf(3, pitched=True),
+            lambda _: abjad.Selection(_).leaf(3, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.StartHairpin("<"),
-            abjad.select().leaf(3, pitched=True),
+            lambda _: abjad.Selection(_).leaf(3, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.Dynamic("f"),
-            abjad.select().leaf(4, pitched=True),
+            lambda _: abjad.Selection(_).leaf(4, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.StartHairpin("--"),
-            abjad.select().leaf(4, pitched=True),
+            lambda _: abjad.Selection(_).leaf(4, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.StartHairpin(">"),
-            abjad.select().leaf(5, pitched=True),
+            lambda _: abjad.Selection(_).leaf(5, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.Dynamic("p"),
-            abjad.select().leaf(6, pitched=True),
+            lambda _: abjad.Selection(_).leaf(6, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.Dynamic("mf"),
-            abjad.select().leaf(7, pitched=True),
+            lambda _: abjad.Selection(_).leaf(7, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.StartHairpin("--"),
-            abjad.select().leaf(7, pitched=True),
+            lambda _: abjad.Selection(_).leaf(7, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.StopHairpin(),
-            abjad.select().leaf(18),
+            lambda _: abjad.Selection(_).leaf(18),
         ),
         evans.attach(
             "Voice 2",
             abjad.Dynamic("p"),
-            abjad.select().leaf(10, pitched=True),
+            lambda _: abjad.Selection(_).leaf(10, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.StartHairpin("<"),
-            abjad.select().leaf(10, pitched=True),
+            lambda _: abjad.Selection(_).leaf(10, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.Dynamic("f"),
-            abjad.select().leaf(11, pitched=True),
+            lambda _: abjad.Selection(_).leaf(11, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.StartHairpin("--"),
-            abjad.select().leaf(11, pitched=True),
+            lambda _: abjad.Selection(_).leaf(11, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.StartHairpin("<"),
-            abjad.select().leaf(13, pitched=True),
+            lambda _: abjad.Selection(_).leaf(13, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.Dynamic("ff"),
-            abjad.select().leaf(14, pitched=True),
+            lambda _: abjad.Selection(_).leaf(14, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.Dynamic("sfp"),
-            abjad.select().leaf(15, pitched=True),
+            lambda _: abjad.Selection(_).leaf(15, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.StartHairpin("--"),
-            abjad.select().leaf(15, pitched=True),
+            lambda _: abjad.Selection(_).leaf(15, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.StopHairpin(),
-            abjad.select().leaf(29),
+            lambda _: abjad.Selection(_).leaf(29),
         ),
         evans.attach(
             "Voice 2",
             abjad.Dynamic("mp"),
-            abjad.select().leaf(17, pitched=True),
+            lambda _: abjad.Selection(_).leaf(17, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.StartHairpin("<"),
-            abjad.select().leaf(17, pitched=True),
+            lambda _: abjad.Selection(_).leaf(17, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.Dynamic("ff"),
-            abjad.select().leaf(18, pitched=True),
+            lambda _: abjad.Selection(_).leaf(18, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.StartHairpin("|>"),
-            abjad.select().leaf(18, pitched=True),
+            lambda _: abjad.Selection(_).leaf(18, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.Dynamic("p"),
-            abjad.select().leaf(19, pitched=True),
+            lambda _: abjad.Selection(_).leaf(19, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.Dynamic("pp"),
-            abjad.select().leaf(20, pitched=True),
+            lambda _: abjad.Selection(_).leaf(20, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.StartHairpin("<|"),
-            abjad.select().leaf(20, pitched=True),
+            lambda _: abjad.Selection(_).leaf(20, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.Dynamic("ff"),
-            abjad.select().leaf(21, pitched=True),
+            lambda _: abjad.Selection(_).leaf(21, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.StartHairpin("--"),
-            abjad.select().leaf(21, pitched=True),
+            lambda _: abjad.Selection(_).leaf(21, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.StartHairpin(">"),
-            abjad.select().leaf(22, pitched=True),
+            lambda _: abjad.Selection(_).leaf(22, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.Dynamic("mf"),
-            abjad.select().leaf(23, pitched=True),
+            lambda _: abjad.Selection(_).leaf(23, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.Dynamic("sfp"),
-            abjad.select().leaf(24, pitched=True),
+            lambda _: abjad.Selection(_).leaf(24, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.StartHairpin("--"),
-            abjad.select().leaf(24, pitched=True),
+            lambda _: abjad.Selection(_).leaf(24, pitched=True),
         ),
         evans.attach(
             "Voice 2",
             abjad.StopHairpin(),
-            abjad.select().leaf(46),
+            lambda _: abjad.Selection(_).leaf(46),
         ),
         evans.call(
             "Voice 2",
             add_trem_name,
-            abjad.select(),
+            lambda _: abjad.Selection(_),
         ),
         evans.attach(
             "Global Context",

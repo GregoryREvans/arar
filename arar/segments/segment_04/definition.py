@@ -18,8 +18,8 @@ def flat_gliss(selections):
         forget=False,
         apply_to="runs",
     )
-    leaves = abjad.select(selections).leaves()
-    for run in abjad.select(selections).runs():
+    leaves = abjad.Selection(selections).leaves()
+    for run in abjad.Selection(selections).runs():
         gliss_handler(run[:])
     for leaf in leaves:
         literal_1 = abjad.LilyPondLiteral(
@@ -35,7 +35,7 @@ def flat_gliss(selections):
 
 
 def hide_tuplet_bracket(selections):
-    for tuplet in abjad.select(selections).components(abjad.Tuplet):
+    for tuplet in abjad.Selection(selections).components(abjad.Tuplet):
         tuplet.hide = True
 
 
@@ -55,7 +55,6 @@ mark_98 = abjad.LilyPondLiteral(
 section_title = abjad.Markup(
     r"""\markup \box \override #'(font-name . "STIXGeneral Bold") \caps C""",
     direction=abjad.Up,
-    literal=True,
 )
 
 maker = evans.SegmentMaker(
@@ -75,17 +74,17 @@ maker = evans.SegmentMaker(
         evans.call(
             "Voice 1",
             flute_pitch_handler_four,
-            abjad.select(),
+            lambda _: abjad.Selection(_),
         ),
         evans.call(
             "Voice 2",
             guitar_pitch_handler_four,
-            abjad.select(),
+            lambda _: abjad.Selection(_),
         ),
         evans.call(
             "Voice 2",
             flat_gliss,
-            abjad.select(),
+            lambda _: abjad.Selection(_),
         ),
         evans.attach("Voice 2", abjad.Articulation("accent"), baca.selectors.leaf(0)),
         evans.attach("Voice 2", abjad.Articulation("staccato"), baca.selectors.leaf(1)),
@@ -133,7 +132,6 @@ maker = evans.SegmentMaker(
             abjad.Markup(
                 r"\markup {detune string 6}",
                 direction=abjad.Up,
-                literal=True,
             ),
             baca.selectors.leaf(0),
         ),
@@ -142,7 +140,6 @@ maker = evans.SegmentMaker(
             abjad.Markup(
                 r"\markup {keep scord.}",
                 direction=abjad.Up,
-                literal=True,
             ),
             baca.selectors.leaf(22),
         ),

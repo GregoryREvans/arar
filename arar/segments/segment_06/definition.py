@@ -19,8 +19,8 @@ tremolo_types = evans.CyclicList(
 
 
 def add_trem_name(selections):
-    for run in abjad.select(selections).runs():
-        leaf_1 = abjad.select(run).leaf(0)
+    for run in abjad.Selection(selections).runs():
+        leaf_1 = abjad.Selection(run).leaf(0)
         following_rest = abjad.get.leaf(run[-1], 1)
         type = tremolo_types(r=1)[0]
         start = abjad.StartTextSpan(
@@ -49,7 +49,6 @@ mark_80 = abjad.LilyPondLiteral(
 section_title = abjad.Markup(
     r"""\markup { \box \override #'(font-name . "STIXGeneral Bold") \caps E}""",
     direction=abjad.Up,
-    literal=True,
 )
 
 maker = evans.SegmentMaker(
@@ -68,17 +67,21 @@ maker = evans.SegmentMaker(
         evans.call(
             "score",
             evans.SegmentMaker.rewrite_meter,
-            abjad.select().components(abjad.Score),
+            lambda _: abjad.Selection(_).components(abjad.Score),
         ),
         "skips",
         handler_commands,
         evans.call(
             "score",
             evans.SegmentMaker.beam_score,
-            abjad.select().components(abjad.Score),
+            lambda _: abjad.Selection(_).components(abjad.Score),
         ),
-        evans.call("Voice 2", add_trem_name, abjad.select().runs().get([1, 2])),
-        evans.attach("Voice 2", abjad.StopTextSpan(), abjad.select().run(2).leaf(3)),
+        evans.call(
+            "Voice 2", add_trem_name, lambda _: abjad.Selection(_).runs().get([1, 2])
+        ),
+        evans.attach(
+            "Voice 2", abjad.StopTextSpan(), lambda _: abjad.Selection(_).run(2).leaf(3)
+        ),
         evans.attach(
             "Voice 1",
             abjad.Dynamic("p"),
